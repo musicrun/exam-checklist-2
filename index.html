@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IB Study Checklist</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --font-sans: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --radius-xs: 12px;
+      --radius-sm: 16px;
+      --radius-md: 22px;
+      --radius-lg: 28px;
+      --radius-xl: 36px;
+      --shadow-soft: 0 12px 40px rgba(15, 23, 42, 0.08);
+      --shadow-card: 0 18px 48px rgba(15, 23, 42, 0.08);
+      --shadow-floating: 0 24px 80px rgba(15, 23, 42, 0.12);
+      --glass-highlight: rgba(255, 255, 255, 0.52);
+      --glass-shadow-line: rgba(15, 23, 42, 0.06);
+      --transition-fast: 180ms ease;
+      --transition-slow: 320ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    :root,
+    [data-theme="light"] {
+      --color-bg: #eef2f7;
+      --color-bg-secondary: #f8fafc;
+      --color-surface: rgba(255, 255, 255, 0.76);
+      --color-surface-strong: rgba(255, 255, 255, 0.92);
+      --color-surface-elevated: rgba(255, 255, 255, 0.98);
+      --color-surface-muted: rgba(241, 245, 249, 0.9);
+      --color-border: rgba(148, 163, 184, 0.18);
+      --color-border-strong: rgba(148, 163, 184, 0.26);
+      --color-text: #0f172a;
+      --color-text-muted: #475569;
+      --color-text-soft: #64748b;
+      --color-chip: rgba(255, 255, 255, 0.65);
+      --color-progress-track: rgba(148, 163, 184, 0.18);
+      --color-success: #0f9f6e;
+      --color-warning: #d97706;
+      --color-danger: #d64545;
+      --subject-math: #14b8a6;
+      --subject-physics: #f97316;
+      --subject-cs: #3b82f6;
+      --subject-econ: #eab308;
+      --ambient-a: rgba(59, 130, 246, 0.18);
+      --ambient-b: rgba(20, 184, 166, 0.14);
+      --ambient-c: rgba(244, 114, 182, 0.10);
+      --ambient-d: rgba(255, 255, 255, 0.56);
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --color-bg: #0b1120;
+      --color-bg-secondary: #111827;
+      --color-surface: rgba(15, 23, 42, 0.72);
+      --color-surface-strong: rgba(15, 23, 42, 0.86);
+      --color-surface-elevated: rgba(15, 23, 42, 0.94);
+      --color-surface-muted: rgba(30, 41, 59, 0.84);
+      --color-border: rgba(148, 163, 184, 0.14);
+      --color-border-strong: rgba(148, 163, 184, 0.22);
+      --color-text: #e5eefb;
+      --color-text-muted: #b4c3d8;
+      --color-text-soft: #8fa3bf;
+      --color-chip: rgba(15, 23, 42, 0.72);
+      --color-progress-track: rgba(148, 163, 184, 0.18);
+      --color-success: #34d399;
+      --color-warning: #fb923c;
+      --color-danger: #f87171;
+      --subject-math: #2dd4bf;
+      --subject-physics: #fb923c;
+      --subject-cs: #60a5fa;
+      --subject-econ: #facc15;
+      --ambient-a: rgba(59, 130, 246, 0.16);
+      --ambient-b: rgba(45, 212, 191, 0.11);
+      --ambient-c: rgba(244, 114, 182, 0.08);
+      --ambient-d: rgba(255, 255, 255, 0.06);
+      --glass-highlight: rgba(255, 255, 255, 0.14);
+      --glass-shadow-line: rgba(255, 255, 255, 0.04);
+      --shadow-soft: 0 18px 42px rgba(2, 6, 23, 0.22);
+      --shadow-card: 0 20px 52px rgba(2, 6, 23, 0.24);
+      --shadow-floating: 0 28px 90px rgba(2, 6, 23, 0.32);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: var(--font-sans);
+      color: var(--color-text);
+      background:
+        radial-gradient(circle at top left, var(--ambient-a), transparent 32%),
+        radial-gradient(circle at top right, var(--ambient-b), transparent 28%),
+        radial-gradient(circle at 50% 100%, var(--ambient-c), transparent 36%),
+        linear-gradient(180deg, var(--color-bg-secondary), var(--color-bg));
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 22% 12%, var(--ambient-d), transparent 18%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.22), transparent 24%);
+      pointer-events: none;
+      opacity: 0.75;
+      z-index: 0;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      background: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .page-shell {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 96px;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .ambient-orb {
+      position: fixed;
+      border-radius: 999px;
+      filter: blur(90px);
+      pointer-events: none;
+      opacity: 0.95;
+      z-index: 0;
+      animation: orb-drift 18s ease-in-out infinite alternate;
+    }
+
+    .ambient-orb.a {
+      width: 220px;
+      height: 220px;
+      left: 4vw;
+      top: 8vh;
+      background: var(--ambient-a);
+    }
+
+    .ambient-orb.b {
+      width: 280px;
+      height: 280px;
+      right: 4vw;
+      top: 16vh;
+      background: var(--ambient-b);
+      animation-duration: 22s;
+    }
+
+    .ambient-orb.c {
+      width: 200px;
+      height: 200px;
+      left: 42vw;
+      top: 56vh;
+      background: var(--ambient-c);
+      animation-duration: 26s;
+    }
+
+    .utility-header,
+    .filter-rail,
+    .content-area,
+    .modal-overlay {
+      position: relative;
+      z-index: 1;
+    }
+
+    .utility-header {
+      position: sticky;
+      top: 16px;
+      z-index: 20;
+      margin-bottom: 18px;
+    }
+
+    .hero-panel {
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.28), transparent 48%),
+        var(--color-surface);
+      border: 1px solid color-mix(in srgb, var(--color-border) 72%, white 28%);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-floating);
+      backdrop-filter: blur(32px) saturate(165%);
+      -webkit-backdrop-filter: blur(32px) saturate(165%);
+      overflow: hidden;
+      transform-origin: 50% 0%;
+      animation: hero-enter 1.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.42), transparent 38%),
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.36), transparent 24%);
+      pointer-events: none;
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: inherit;
+      border-top: 1px solid var(--glass-highlight);
+      box-shadow: inset 0 1px 0 var(--glass-highlight), inset 0 -1px 0 var(--glass-shadow-line);
+      pointer-events: none;
+      opacity: 0.95;
+    }
+
+    .hero-inner {
+      padding: 32px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.9fr);
+      gap: 28px;
+      align-items: end;
+      position: relative;
+      z-index: 1;
+    }
+
+    .liquid-lens {
+      position: absolute;
+      right: 36px;
+      top: 22px;
+      width: 172px;
+      height: 172px;
+      border-radius: 42px;
+      background:
+        radial-gradient(circle at 28% 26%, rgba(255, 255, 255, 0.9), transparent 24%),
+        radial-gradient(circle at 68% 72%, rgba(59, 130, 246, 0.26), transparent 34%),
+        radial-gradient(circle at 54% 38%, rgba(20, 184, 166, 0.22), transparent 32%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.06));
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -18px 30px rgba(255, 255, 255, 0.08),
+        0 18px 44px rgba(15, 23, 42, 0.12);
+      backdrop-filter: blur(18px) saturate(165%);
+      -webkit-backdrop-filter: blur(18px) saturate(165%);
+      transform: rotate(10deg);
+      opacity: 0.92;
+      animation: lens-float 12s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    .liquid-lens::before,
+    .liquid-lens::after {
+      content: "";
+      position: absolute;
+      border-radius: inherit;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .liquid-lens::before {
+      inset: 10px;
+      border-radius: 34px;
+      border-top: 1px solid rgba(255, 255, 255, 0.42);
+      border-left: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .liquid-lens::after {
+      inset: 22px;
+      border-radius: 28px;
+      background: radial-gradient(circle at 38% 28%, rgba(255, 255, 255, 0.32), transparent 36%);
+      opacity: 0.8;
+    }
+
+    .hero-copy {
+      display: grid;
+      gap: 10px;
+      animation: rise-in 1s cubic-bezier(0.16, 1, 0.3, 1) 120ms both;
+    }
+
+    .eyebrow {
+      font-size: 0.79rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text-soft);
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 5vw, 3.9rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+      font-weight: 650;
+    }
+
+    .hero-subtitle {
+      max-width: 640px;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--color-text-muted);
+    }
+
+    .hero-meta {
+      display: grid;
+      gap: 16px;
+      justify-items: end;
+      animation: rise-in 1s cubic-bezier(0.16, 1, 0.3, 1) 220ms both;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .theme-toggle,
+    .reset-btn,
+    .subject-action,
+    .block-header {
+      transition:
+        transform var(--transition-fast),
+        background var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast),
+        box-shadow var(--transition-fast);
+    }
+
+    .theme-toggle,
+    .reset-btn,
+    .subject-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid color-mix(in srgb, var(--color-border) 70%, white 30%);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.08)),
+        var(--color-surface-strong);
+      box-shadow: var(--shadow-soft);
+      color: var(--color-text);
+      backdrop-filter: blur(22px) saturate(145%);
+      -webkit-backdrop-filter: blur(22px) saturate(145%);
+    }
+
+    .theme-toggle:hover,
+    .reset-btn:hover,
+    .subject-action:hover {
+      transform: translateY(-1px);
+      border-color: var(--color-border-strong);
+    }
+
+    .reset-btn {
+      color: var(--color-danger);
+      background: color-mix(in srgb, var(--color-surface-strong) 78%, var(--color-danger) 22%);
+    }
+
+    .icon-badge {
+      width: 30px;
+      height: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.16));
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      flex: 0 0 auto;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34);
+    }
+
+    [data-theme="dark"] .icon-badge {
+      background: rgba(148, 163, 184, 0.12);
+      border-color: rgba(148, 163, 184, 0.12);
+    }
+
+    .theme-toggle-label {
+      font-weight: 560;
+      letter-spacing: -0.01em;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 14px;
+      padding: 0 32px 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .overview-card {
+      padding: 22px 22px 20px;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.08)),
+        var(--color-surface-strong);
+      border: 1px solid color-mix(in srgb, var(--color-border) 72%, white 28%);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(24px) saturate(150%);
+      -webkit-backdrop-filter: blur(24px) saturate(150%);
+      animation: rise-in 1s cubic-bezier(0.16, 1, 0.3, 1) 300ms both;
+    }
+
+    .overview-label,
+    .progress-caption,
+    .subject-caption,
+    .pill {
+      font-size: 0.82rem;
+      color: var(--color-text-soft);
+    }
+
+    .overview-label {
+      display: block;
+      margin-bottom: 12px;
+      font-weight: 560;
+      letter-spacing: -0.01em;
+    }
+
+    .overview-progress-row,
+    .subject-progress-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .progress-value {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1;
+      font-weight: 650;
+      letter-spacing: -0.05em;
+    }
+
+    .progress-caption {
+      font-weight: 520;
+    }
+
+    .progress-track {
+      height: 10px;
+      width: 100%;
+      border-radius: 999px;
+      overflow: hidden;
+      background: var(--color-progress-track);
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(59, 130, 246, 0.9), rgba(20, 184, 166, 0.96));
+      transition: width 360ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .overview-stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .mini-stat {
+      display: grid;
+      gap: 6px;
+    }
+
+    .mini-stat strong {
+      font-size: 1.6rem;
+      line-height: 1;
+      letter-spacing: -0.045em;
+      font-weight: 620;
+    }
+
+    .filter-rail {
+      position: sticky;
+      top: 210px;
+      z-index: 18;
+      margin-bottom: 26px;
+      animation: rise-in 1s cubic-bezier(0.16, 1, 0.3, 1) 420ms both;
+    }
+
+    .filter-shell {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 10px 8px;
+      scrollbar-width: none;
+      width: fit-content;
+      max-width: 100%;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid color-mix(in srgb, var(--color-border) 68%, white 32%);
+      box-shadow: var(--shadow-soft);
+      border-radius: 999px;
+      backdrop-filter: blur(28px) saturate(160%);
+      -webkit-backdrop-filter: blur(28px) saturate(160%);
+    }
+
+    .filter-shell::-webkit-scrollbar {
+      display: none;
+    }
+
+    .chip {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--color-text-muted);
+      box-shadow: none;
+      transition:
+        transform var(--transition-fast),
+        background var(--transition-fast),
+        color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast);
+    }
+
+    .chip.active {
+      color: var(--color-text);
+      border-color: color-mix(in srgb, var(--color-border) 60%, white 40%);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.12)),
+        var(--color-surface-elevated);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38), var(--shadow-soft);
+    }
+
+    .chip:hover {
+      transform: translateY(-1px);
+      color: var(--color-text);
+    }
+
+    .chip-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      flex: 0 0 auto;
+    }
+
+    .chip-count {
+      color: var(--color-text-soft);
+      font-size: 0.75rem;
+    }
+
+    .content-area {
+      display: grid;
+      gap: 20px;
+    }
+
+    .subject-section {
+      padding: 28px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.26), transparent 30%),
+        var(--color-surface);
+      border: 1px solid color-mix(in srgb, var(--color-border) 72%, white 28%);
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(28px) saturate(150%);
+      -webkit-backdrop-filter: blur(28px) saturate(150%);
+      animation: section-in 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .subject-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 30%);
+      pointer-events: none;
+    }
+
+    .subject-section::after {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: inherit;
+      border-top: 1px solid var(--glass-highlight);
+      pointer-events: none;
+    }
+
+    .subject-section.hidden {
+      display: none;
+    }
+
+    .subject-shell {
+      display: grid;
+      gap: 22px;
+    }
+
+    .subject-header {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      align-items: start;
+    }
+
+    .subject-intro {
+      display: grid;
+      gap: 12px;
+    }
+
+    .subject-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--color-text-soft);
+      font-size: 0.82rem;
+      font-weight: 560;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+    }
+
+    .subject-title {
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      font-weight: 640;
+    }
+
+    .subject-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.08)),
+        var(--color-surface-strong);
+      border: 1px solid color-mix(in srgb, var(--color-border) 72%, white 28%);
+      color: var(--color-text-muted);
+      font-weight: 540;
+      letter-spacing: -0.01em;
+      backdrop-filter: blur(18px) saturate(145%);
+      -webkit-backdrop-filter: blur(18px) saturate(145%);
+    }
+
+    .pill strong {
+      color: var(--color-text);
+      font-weight: 580;
+    }
+
+    .pill.countdown-green {
+      color: var(--color-success);
+      background: color-mix(in srgb, var(--color-surface-strong) 78%, var(--color-success) 22%);
+    }
+
+    .pill.countdown-orange {
+      color: var(--color-warning);
+      background: color-mix(in srgb, var(--color-surface-strong) 80%, var(--color-warning) 20%);
+    }
+
+    .pill.countdown-red {
+      color: var(--color-danger);
+      background: color-mix(in srgb, var(--color-surface-strong) 82%, var(--color-danger) 18%);
+    }
+
+    .subject-summary {
+      display: grid;
+      gap: 14px;
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.06)),
+        var(--color-surface-strong);
+      border: 1px solid color-mix(in srgb, var(--color-border) 72%, white 28%);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(24px) saturate(150%);
+      -webkit-backdrop-filter: blur(24px) saturate(150%);
+    }
+
+    .subject-progress-value {
+      font-size: 1.1rem;
+      font-weight: 620;
+      letter-spacing: -0.03em;
+    }
+
+    .subject-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .subject-action {
+      min-height: 42px;
+      padding: 0 16px;
+      background: var(--color-surface-elevated);
+      color: var(--color-text-muted);
+    }
+
+    .subject-action:hover {
+      color: var(--color-text);
+    }
+
+    .block-listing {
+      display: grid;
+      gap: 14px;
+    }
+
+    .block-card {
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.06)),
+        var(--color-surface-strong);
+      border: 1px solid color-mix(in srgb, var(--color-border) 72%, white 28%);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      backdrop-filter: blur(22px) saturate(145%);
+      -webkit-backdrop-filter: blur(22px) saturate(145%);
+    }
+
+    .block-card.block-done {
+      background: color-mix(in srgb, var(--color-surface-strong) 88%, var(--color-success) 12%);
+      border-color: color-mix(in srgb, var(--color-border) 62%, var(--color-success) 38%);
+    }
+
+    .block-header {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto auto;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 20px;
+      text-align: left;
+      background: transparent;
+    }
+
+    .block-header:hover {
+      background: color-mix(in srgb, var(--color-surface-elevated) 90%, white 10%);
+    }
+
+    .block-code {
+      min-width: 46px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface-elevated);
+      color: var(--color-text-soft);
+      font-size: 0.8rem;
+      font-weight: 630;
+      letter-spacing: -0.01em;
+    }
+
+    .block-card.block-done .block-code {
+      color: var(--color-success);
+      border-color: color-mix(in srgb, var(--color-success) 34%, var(--color-border) 66%);
+      background: color-mix(in srgb, var(--color-surface-elevated) 82%, var(--color-success) 18%);
+    }
+
+    .block-title-wrap {
+      display: grid;
+      gap: 3px;
+      min-width: 0;
+    }
+
+    .block-title {
+      font-size: 1.02rem;
+      line-height: 1.35;
+      font-weight: 580;
+      letter-spacing: -0.02em;
+    }
+
+    .block-meta {
+      color: var(--color-text-soft);
+      font-size: 0.82rem;
+    }
+
+    .block-count {
+      color: var(--color-text-muted);
+      font-size: 0.85rem;
+      font-weight: 560;
+      white-space: nowrap;
+    }
+
+    .block-chevron {
+      width: 18px;
+      height: 18px;
+      color: var(--color-text-soft);
+      transition: transform var(--transition-fast);
+      flex: 0 0 auto;
+    }
+
+    .block-card.block-open .block-chevron {
+      transform: rotate(180deg);
+    }
+
+    .block-body {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows var(--transition-slow);
+    }
+
+    .block-card.block-open .block-body {
+      grid-template-rows: 1fr;
+    }
+
+    .block-body-inner {
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .topic-list {
+      display: grid;
+      gap: 8px;
+      padding: 0 20px 20px;
+    }
+
+    .checkbox-item {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: start;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.04)),
+        color-mix(in srgb, var(--color-surface-elevated) 78%, transparent 22%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+      cursor: pointer;
+      backdrop-filter: blur(14px) saturate(140%);
+      -webkit-backdrop-filter: blur(14px) saturate(140%);
+    }
+
+    .checkbox-item:hover {
+      border-color: var(--color-border);
+      transform: translateY(-1px);
+    }
+
+    .checkbox-input {
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 1.5px solid var(--color-border-strong);
+      background: var(--color-surface-elevated);
+      position: relative;
+      margin-top: 1px;
+      transition: all var(--transition-fast);
+      flex: 0 0 auto;
+    }
+
+    .checkbox-input:checked {
+      border-color: transparent;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.95), rgba(20, 184, 166, 0.95));
+      box-shadow: 0 10px 24px rgba(20, 184, 166, 0.22);
+    }
+
+    .checkbox-input::after {
+      content: "";
+      position: absolute;
+      inset: 6px 7px 7px 6px;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(45deg) scale(0);
+      transition: transform var(--transition-fast);
+    }
+
+    .checkbox-input:checked::after {
+      transform: rotate(45deg) scale(1);
+    }
+
+    .checkbox-text {
+      font-size: 0.98rem;
+      line-height: 1.55;
+      color: var(--color-text);
+    }
+
+    .checkbox-item.checkbox-done {
+      background: color-mix(in srgb, var(--color-surface-elevated) 70%, var(--color-success) 30%);
+    }
+
+    .checkbox-item.checkbox-done .checkbox-text {
+      color: var(--color-text-soft);
+      text-decoration: line-through;
+      text-decoration-thickness: 1.5px;
+    }
+
+    .highlight-pulse {
+      animation: soft-flash 1.1s ease;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(15, 23, 42, 0.28);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .modal-overlay.visible {
+      display: flex;
+    }
+
+    .modal {
+      width: min(100%, 430px);
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: var(--color-surface-elevated);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-floating);
+      display: grid;
+      gap: 12px;
+    }
+
+    .modal-title {
+      font-size: 1.35rem;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      font-weight: 640;
+    }
+
+    .modal-text {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--color-text-muted);
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+
+    .modal-btn {
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface-strong);
+      color: var(--color-text);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .modal-btn-danger {
+      color: #fff;
+      border-color: transparent;
+      background: linear-gradient(135deg, #f87171, #ef4444);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @keyframes section-in {
+      from {
+        opacity: 0;
+        transform: translateY(28px) scale(0.985);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes rise-in {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+        filter: blur(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes hero-enter {
+      0% {
+        opacity: 0;
+        transform: translateY(34px) scale(0.965);
+        filter: blur(14px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes orb-drift {
+      0% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      100% {
+        transform: translate3d(20px, -26px, 0) scale(1.08);
+      }
+    }
+
+    @keyframes lens-float {
+      0% {
+        transform: rotate(10deg) translate3d(0, 0, 0);
+      }
+      100% {
+        transform: rotate(3deg) translate3d(-10px, 8px, 0);
+      }
+    }
+
+    @keyframes soft-flash {
+      0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.18);
+      }
+      100% {
+        box-shadow: 0 0 0 18px rgba(59, 130, 246, 0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero-inner,
+      .overview-grid,
+      .subject-header {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-meta {
+        justify-items: start;
+      }
+
+      .hero-actions {
+        justify-content: flex-start;
+      }
+
+      .liquid-lens {
+        right: 20px;
+        top: 18px;
+        width: 132px;
+        height: 132px;
+      }
+
+      .filter-rail {
+        top: 240px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page-shell {
+        width: min(100% - 18px, 1180px);
+        padding-top: 12px;
+      }
+
+      .utility-header {
+        top: 10px;
+      }
+
+      .hero-inner,
+      .overview-grid {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .hero-inner {
+        padding-top: 22px;
+        padding-bottom: 20px;
+      }
+
+      .overview-grid {
+        padding-bottom: 20px;
+      }
+
+      .hero-title {
+        font-size: 2.15rem;
+      }
+
+      .liquid-lens {
+        width: 104px;
+        height: 104px;
+        border-radius: 28px;
+      }
+
+      .subject-section {
+        padding: 20px;
+      }
+
+      .block-header {
+        grid-template-columns: auto minmax(0, 1fr) auto;
+      }
+
+      .block-count {
+        grid-column: 2;
+      }
+
+      .block-chevron {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        align-self: center;
+      }
+
+      .filter-rail {
+        position: sticky;
+        top: 232px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient-orb a"></div>
+  <div class="ambient-orb b"></div>
+  <div class="ambient-orb c"></div>
+
+  <div class="page-shell">
+    <header class="utility-header">
+      <div class="hero-panel">
+        <div class="liquid-lens" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <div class="eyebrow">IB Study Utility</div>
+            <h1 class="hero-title">Study Checklist</h1>
+            <p class="hero-subtitle">
+              A calmer, cleaner revision workspace for tracking every topic across Math, Physics, Computer Science, and Economics without the old dashboard clutter.
+            </p>
+          </div>
+
+          <div class="hero-meta">
+            <div class="hero-actions">
+              <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+                <span class="icon-badge" id="themeToggleGlyph"></span>
+                <span class="theme-toggle-label" id="themeToggleLabel">Dark mode</span>
+              </button>
+              <button class="reset-btn" id="resetAllBtn" type="button">
+                <span class="icon-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M3 6h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M8 6V4.8C8 3.81 8.81 3 9.8 3h4.4C15.19 3 16 3.81 16 4.8V6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M18 6l-1 13.2A2 2 0 0 1 15.01 21H8.99A2 2 0 0 1 7 19.2L6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <span>Reset progress</span>
+              </button>
+            </div>
+            <div class="pill" id="stickySubjectPill">
+              <span>Viewing</span>
+              <strong id="stickySubject">All Subjects</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-grid">
+          <section class="overview-card">
+            <span class="overview-label">Overall progress</span>
+            <div class="overview-progress-row">
+              <strong class="progress-value" id="stickyProgress">0%</strong>
+              <span class="progress-caption" id="globalProgressText">0 / 0 topics done</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="globalProgressFill"></div>
+            </div>
+          </section>
+
+          <section class="overview-card overview-stack">
+            <div class="mini-stat">
+              <span class="overview-label">Subjects</span>
+              <strong id="subjectCount">0</strong>
+            </div>
+            <div class="mini-stat">
+              <span class="overview-label">Topic blocks</span>
+              <strong id="blockCount">0</strong>
+            </div>
+          </section>
+        </div>
+      </div>
+    </header>
+
+    <div class="filter-rail">
+      <div class="filter-shell" id="filterChips"></div>
+    </div>
+
+    <main class="content-area" id="contentArea"></main>
+  </div>
+
+  <div class="modal-overlay" id="resetModal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="resetTitle">
+      <div class="modal-title" id="resetTitle">Reset all progress?</div>
+      <div class="modal-text">This clears every checked topic across all subjects. The checklist content stays the same, but your saved progress is removed.</div>
+      <div class="modal-actions">
+        <button class="modal-btn" id="cancelReset" type="button">Keep progress</button>
+        <button class="modal-btn modal-btn-danger" id="confirmReset" type="button">Reset everything</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // ========== DATA ==========
+  const subjects = [
+    {
+      id: 'math', name: 'Math AA HL',
+      accent: 'var(--subject-math)',
+      exams: ['P1 Sun 31 May', 'P2 Mon 2 Jun'],
+      examDates: ['2026-05-31'],
+      blocks: [
+        { code: 'M1', title: 'Sets & Functions (Basics)', topics: [
+          'Real, rational, irrational, integer, natural number sets',
+          'Relations vs functions',
+          'Intervals: open, closed, half-open, half-closed',
+          'Finding domain and range from sets',
+          'Finding domain and range from graphs'
+        ]},
+        { code: 'M2', title: 'Linear & Quadratic Functions', topics: [
+          'All forms of linear equations (slope-intercept, point-slope, standard)',
+          'All forms of quadratic functions',
+          'Completing the square',
+          'Sketching quadratic functions',
+          'Using the discriminant (0, 1, 2 roots relationship to x-axis)',
+          'Finding a quadratic from its graph'
+        ]},
+        { code: 'M3', title: 'Intersections & Polynomials Intro', topics: [
+          'Intersection of quadratic and linear graphs',
+          'Intersection of two quadratic graphs',
+          'Polynomial functions: definition, domain, range',
+          'Radical functions: sketching, domain, range'
+        ]},
+        { code: 'M4', title: 'Functions with GDC & Function Types', topics: [
+          'Graphing functions using the GDC',
+          'Finding turning points using GDC',
+          'Domain and range from GDC',
+          'One-to-one functions',
+          'Many-to-one functions',
+          'Even functions',
+          'Odd functions',
+          'Radical functions (advanced)'
+        ]},
+        { code: 'M5', title: 'Composite & Inverse Functions', topics: [
+          'Composite functions: definition and evaluation',
+          'Inverse functions: finding analytically',
+          'Inverse functions: graphical relationship (reflection in y=x)',
+          'Finding x-intercepts using GDC',
+          'Finding points of intersection between graphs using GDC'
+        ]},
+        { code: 'M6', title: 'Rational Functions (Core)', topics: [
+          'Rational functions: numerator degree < denominator degree',
+          'Vertical asymptotes',
+          'Horizontal asymptotes',
+          'x-intercepts and y-intercepts',
+          'Domain and range',
+          'Sketching rational functions'
+        ]},
+        { code: 'M7', title: 'Advanced Rationals & Absolute Value', topics: [
+          'Rational functions: numerator degree > denominator degree (oblique asymptote)',
+          'Oblique asymptote: finding by polynomial division',
+          'Partial fractions',
+          'Absolute value function: graph, domain, range',
+          'Absolute value equations',
+          'Absolute value inequalities',
+          'Solving absolute value graphically'
+        ]},
+        { code: 'M8', title: 'Transformations & Special Graphs', topics: [
+          'Vertical translation: y = f(x) + a',
+          'Horizontal translation: y = f(x - a)',
+          'Vertical stretch: y = af(x)',
+          'Horizontal stretch: y = f(ax)',
+          'Reflection in x-axis: y = -f(x)',
+          'Reflection in y-axis: y = f(-x)',
+          'Combinations of transformations',
+          'Graph of y = (f(x))²',
+          'Graph of y = 1/f(x)',
+          'Graph of y = f(|x|)'
+        ]},
+        { code: 'M9', title: 'Polynomials & Roots', topics: [
+          'Polynomial long division',
+          'Synthetic division',
+          'Factor theorem',
+          'Polynomial remainder theorem',
+          'Fully factorising a polynomial using synthetic division',
+          'Sum and product of polynomial roots',
+          'Finding equation of cubic from its graph',
+          'Sketching a cubic function'
+        ]},
+        { code: 'M10', title: 'Exponentials, Logs & Systems', topics: [
+          'Laws of exponents (revision)',
+          'Solving exponential equations',
+          'Exponential functions: domain, range, graphs',
+          'Growth and decay models',
+          'Logarithmic functions: domain, range, graphs',
+          'Laws of logarithms',
+          'Solving systems of 3×3 linear equations',
+          'Types of solutions: unique, infinitely many, no solution'
+        ]},
+        { code: 'M11', title: 'Sequences, Series & Financial Math', topics: [
+          'Arithmetic sequences: term formula, common difference',
+          'Arithmetic series: sum formula',
+          'Geometric sequences: term formula, common ratio',
+          'Writing series using sigma notation',
+          'Geometric series: sum formula',
+          'Financial math: compound interest',
+          'Financial math: annuities and loans',
+          'Binomial theorem'
+        ]},
+        { code: 'M12', title: 'Trigonometry', topics: [
+          'Bearings',
+          'Sine rule',
+          'Cosine rule',
+          'Ambiguous case (sine rule)',
+          'Unit circle: angles and coordinates',
+          'Trig functions and their graphs (sin, cos, tan)',
+          'Solving trigonometric equations (general and restricted)',
+          'Compound angle identities',
+          'Modelling using trig functions',
+          'Inverse trig functions'
+        ]},
+        { code: 'M13', title: 'Calculus', topics: [
+          'Power rule for differentiation',
+          'Sum/difference rule',
+          'Product rule',
+          'Quotient rule',
+          'Chain rule',
+          'Derivatives of trig functions',
+          'Finding equations of tangents to curves',
+          'Finding equations of normals to curves',
+          'Basic differential equations'
+        ]}
+      ]
+    },
+    {
+      id: 'physics', name: 'Physics HL',
+      accent: 'var(--subject-physics)',
+      exams: ['P1 Wed 3 Jun', 'P2 Thu 4 Jun'],
+      examDates: ['2026-06-03'],
+      blocks: [
+        { code: 'P1', title: 'Kinematics (Theme A)', topics: [
+          'Displacement, velocity, acceleration definitions',
+          'Constant-acceleration equations (SUVAT)',
+          'Displacement-time graph analysis (gradient = velocity)',
+          'Velocity-time graph analysis (gradient = acceleration, area = displacement)',
+          'Projectile motion: horizontal and vertical components',
+          'Projectile motion: range and maximum height'
+        ]},
+        { code: 'P2', title: 'Forces & Momentum (Theme A)', topics: [
+          'Free-body diagrams',
+          'Weight, normal force, friction, tension',
+          "Newton's first law",
+          "Newton's second law (F = ma)",
+          "Newton's third law",
+          'Impulse and change in momentum (J = Delta p)',
+          'Conservation of momentum (1D)',
+          'Conservation of momentum (2D)',
+          'Elastic vs inelastic collisions'
+        ]},
+        { code: 'P3', title: 'Work, Energy & Power (Theme A)', topics: [
+          'Work done by a constant force',
+          'Work-energy theorem',
+          'Kinetic energy',
+          'Gravitational potential energy',
+          'Conservation of mechanical energy',
+          'Power: average and instantaneous',
+          'Efficiency'
+        ]},
+        { code: 'P4', title: 'Advanced Mechanics (Theme A)', topics: [
+          'Circular motion: centripetal acceleration',
+          'Circular motion: centripetal force',
+          'Applications of circular motion (banked tracks, satellites)',
+          'Special relativity: time dilation (HL)',
+          'Special relativity: length contraction (HL)'
+        ]},
+        { code: 'P5', title: 'Thermal Energy (Theme B)', topics: [
+          'Specific heat capacity: formula and calorimetry problems',
+          'Specific latent heat: fusion and vaporisation',
+          'Phase change diagrams (heating curves)',
+          'Conduction, convection, radiation mechanisms',
+          'Black-body radiation concept'
+        ]},
+        { code: 'P6', title: 'Gases & Thermodynamics (Theme B)', topics: [
+          'Ideal gas law: PV = nRT',
+          "Boyle's law, Charles's law, Gay-Lussac's law",
+          'Kinetic theory: pressure from microscopic model',
+          'Internal energy',
+          "First law of thermodynamics (Delta U = Q - W)",
+          'Isobaric, isochoric, isothermal, adiabatic processes',
+          'P-V diagrams',
+          'Thermal efficiency basics'
+        ]},
+        { code: 'P7', title: 'Gravitational Fields (Theme D)', topics: [
+          'Gravitational field strength g',
+          "Newton's law of gravitation",
+          'Gravitational field lines and equipotential surfaces',
+          'Gravitational potential',
+          'Orbital mechanics: centripetal force = gravitational force',
+          'Geostationary and polar orbits'
+        ]},
+        { code: 'P8', title: 'Electric & Magnetic Fields (Theme D)', topics: [
+          "Coulomb's law",
+          'Electric field strength: E = F/q',
+          'Electric field lines and equipotential surfaces',
+          'Electric potential',
+          'Uniform electric fields',
+          'Magnetic field around a straight wire',
+          'Magnetic field inside a solenoid',
+          'Force on a current-carrying conductor (F = BIL)',
+          'Force on a moving charge (F = qvB)'
+        ]},
+        { code: 'P9', title: 'Motion in EM Fields (Theme D)', topics: [
+          'Circular motion of a charged particle in a magnetic field',
+          'Helical motion',
+          'Velocity selector',
+          'Mass spectrometer principle'
+        ]},
+        { code: 'P10', title: 'Electromagnetic Induction (Theme D)', topics: [
+          'Magnetic flux (Phi = BA cos theta)',
+          "Faraday's law of induction",
+          "Lenz's law",
+          'EMF in a moving conductor (epsilon = BLv)',
+          'Simple AC generator',
+          'Mixed fields + mechanics problems'
+        ]}
+      ]
+    },
+    {
+      id: 'cs', name: 'Computer Science HL',
+      accent: 'var(--subject-cs)',
+      exams: ['P1 Sun 7 Jun', 'P2 Mon 8 Jun'],
+      examDates: ['2026-06-07'],
+      blocks: [
+        { code: 'C1', title: 'Hardware & Operating Systems (A1)', topics: [
+          'CPU components: ALU, CU, registers, cache, clock',
+          'Memory hierarchy: registers, cache, RAM, secondary storage',
+          'Secondary storage types (HDD, SSD, optical)',
+          'Input/output devices',
+          'GPU and parallel processing concepts',
+          'OS functions: process/memory/file/I/O management',
+          'Multitasking and scheduling',
+          'Control systems: sensors and actuators'
+        ]},
+        { code: 'C2', title: 'Data Representation & Logic (A1)', topics: [
+          'Binary number system and conversion',
+          'Hexadecimal and conversion',
+          "Two's complement representation",
+          'Fixed-point and floating-point concepts',
+          'Basic logic gates: AND, OR, NOT, NAND, NOR, XOR',
+          'Truth tables',
+          'Simple Boolean expressions',
+          'Boolean simplification basics'
+        ]},
+        { code: 'C3', title: 'Computational Thinking (B1)', topics: [
+          'Problem specification and requirements',
+          'Decomposition',
+          'Abstraction',
+          'Pattern recognition',
+          'Algorithm design: inputs, outputs, pre/post-conditions',
+          'Trace tables',
+          'Pseudocode conventions'
+        ]},
+        { code: 'C4', title: 'Core Programming (B2)', topics: [
+          'Variables and data types',
+          'Expressions and operators',
+          'Selection: if/else, nested if, case/switch',
+          'Iteration: for loops, while loops, repeat-until',
+          'Procedures and functions',
+          'Parameters: passing by value',
+          'Local vs global variables',
+          'Error types: syntax, logic, runtime'
+        ]},
+        { code: 'C5', title: 'Data Structures (B2)', topics: [
+          'Arrays: declaration, access, traversal',
+          '2D arrays',
+          'Lists vs arrays (static vs dynamic)',
+          'Stacks: push, pop, peek, isEmpty, LIFO principle',
+          'Queues: enqueue, dequeue, peek, isEmpty, FIFO principle',
+          'Use cases for stacks (call stack, undo)',
+          'Use cases for queues (print queue, scheduling)'
+        ]},
+        { code: 'C6', title: 'Algorithms (B2)', topics: [
+          'Linear search: algorithm and trace',
+          'Binary search: algorithm, trace, requirement (sorted)',
+          'Bubble sort: algorithm, trace, comparisons',
+          'Insertion sort: algorithm, trace',
+          'Selection sort: algorithm, trace',
+          'Merge sort: concept and divide/conquer idea',
+          'Big-O: O(1), O(n), O(n²), O(n log n) — which algorithm maps to which'
+        ]},
+        { code: 'C7', title: 'File Handling (B2)', topics: [
+          'Opening files (read, write, append modes)',
+          'Reading lines from a text file',
+          'Writing to a text file',
+          'EOF detection',
+          'Error handling in file I/O',
+          'Combining file I/O with loops and conditionals'
+        ]},
+        { code: 'C8', title: 'OOP & Abstract Data Types (B3.1 + B4.1)', topics: [
+          'Classes and objects',
+          'Attributes and methods',
+          'Constructors',
+          'Encapsulation (private vs public)',
+          'Instantiating objects',
+          'Calling methods on objects',
+          'Conceptual linked lists: nodes, head pointer, traversal',
+          'Conceptual binary trees: nodes, left/right children, root',
+          'Advantages of linked lists over arrays',
+          'Advantages of trees for searching'
+        ]}
+      ]
+    },
+    {
+      id: 'econ', name: 'Economics HL',
+      accent: 'var(--subject-econ)',
+      exams: ['P3 Sun 14 Jun', 'P2 Sun 14 Jun'],
+      examDates: ['2026-06-14'],
+      blocks: [
+        { code: 'E1', title: 'Introduction to Economics (Chapter 1)', topics: [
+          'Scarcity and the economic problem',
+          'Choice and opportunity cost',
+          'Production possibility curve (PPC): shape and shifts',
+          'Economic systems: free market, planned, mixed',
+          'Positive vs normative economics',
+          'Rational choice exercise concepts'
+        ]},
+        { code: 'E2', title: 'Competitive Markets (Chapter 2)', topics: [
+          "Law of demand and demand curve",
+          'Determinants of demand (shifters)',
+          "Law of supply and supply curve",
+          'Determinants of supply (shifters)',
+          'Market equilibrium: price and quantity',
+          'Excess demand and excess supply',
+          'Effects of shifts in demand on equilibrium',
+          'Effects of shifts in supply on equilibrium'
+        ]},
+        { code: 'E3', title: 'Elasticities (Chapter 3)', topics: [
+          'Price elasticity of demand (PED): formula and calculation',
+          'PED determinants',
+          'PED and total revenue relationship',
+          'Price elasticity of supply (PES): formula and calculation',
+          'PES determinants',
+          'Cross elasticity of demand (XED): formula, substitutes vs complements',
+          'Income elasticity of demand (YED): formula, normal vs inferior goods',
+          'Applications of elasticity in policy'
+        ]},
+        { code: 'E4', title: 'Government Intervention (Chapter 4)', topics: [
+          'Price ceilings: diagram, effects, stakeholders',
+          'Price floors: diagram, effects, stakeholders',
+          'Specific taxes: effect on supply, diagram, incidence',
+          'Subsidies: effect on supply, diagram, consumer/producer surplus',
+          'Welfare effects: consumer surplus, producer surplus, deadweight loss',
+          'Evaluation of government intervention'
+        ]},
+        { code: 'E5', title: 'Market Failure (Chapter 5)', topics: [
+          'Categories of goods: private, public, common access, club',
+          'Positive externalities: diagram, underproduction, government responses',
+          'Negative externalities: diagram, overproduction, government responses',
+          'Public goods: non-excludable, non-rival, free-rider problem',
+          'Common access resources and overuse',
+          'Government responses to market failure (taxes, subsidies, regulation, provision)'
+        ]},
+        { code: 'E6', title: 'Level of Overall Economic Activity (Chapter 8)', topics: [
+          'Circular flow of income (households, firms, government, banks, foreign sector)',
+          'Injections and leakages',
+          'GDP definition',
+          'GDP measurement: output, income, expenditure approaches',
+          'Real vs nominal GDP',
+          'GNI vs GDP',
+          'Limitations of GDP as a welfare measure',
+          'HDI and alternative welfare indicators'
+        ]},
+        { code: 'E7', title: 'Aggregate Demand & Supply (Chapter 9)', topics: [
+          'Components of AD (C + I + G + X - M)',
+          'Factors shifting AD',
+          'Short-run aggregate supply (SRAS): shape, shifters',
+          'Long-run aggregate supply (LRAS): shape, full employment',
+          'Macroeconomic equilibrium (AD-SRAS)',
+          'Demand-side shocks: inflationary and deflationary gaps',
+          'Supply-side shocks',
+          'Keynesian multiplier concept',
+          'Monetarist vs Keynesian views on LRAS and policy'
+        ]},
+        { code: 'E8', title: 'Macroeconomic Objectives & Growth (Chapter 10 + Cases)', topics: [
+          'Economic growth: definition, actual vs potential',
+          'Benefits and costs of economic growth',
+          'Unemployment: definition, types (cyclical, structural, frictional, seasonal)',
+          'Costs of unemployment',
+          'Inflation: definition, CPI measurement',
+          'Costs of inflation (unanticipated vs anticipated)',
+          'Equity in income distribution: Lorenz curve, Gini coefficient',
+          'Macroeconomic policy trade-offs',
+          'The Great Depression: causes and AD-AS analysis',
+          'Iceland macroeconomy case: applying macro concepts'
+        ]}
+      ]
+    }
+  ];
+
+  // ========== STATE ==========
+  const LS_KEY = 'ibStudyChecklist';
+  let checkedState = {};
+  let currentFilter = 'all';
+  let blockOpenState = {};
+  try { checkedState = JSON.parse(localStorage.getItem(LS_KEY)) || {}; } catch (e) { checkedState = {}; }
+
+  function saveState() {
+    localStorage.setItem(LS_KEY, JSON.stringify(checkedState));
+  }
+
+  function saveTheme(theme) {
+    localStorage.setItem('ibStudyTheme', theme);
+  }
+
+  function blockStateKey(subjectId, blockCode) {
+    return `${subjectId}::${blockCode}`;
+  }
+
+  function ensureBlockState() {
+    subjects.forEach(subject => {
+      subject.blocks.forEach(block => {
+        const key = blockStateKey(subject.id, block.code);
+        if (!(key in blockOpenState)) blockOpenState[key] = true;
+      });
+    });
+  }
+
+  ensureBlockState();
+
+  // ========== HELPERS ==========
+  function daysUntil(dateStr) {
+    const exam = new Date(dateStr);
+    const now = new Date();
+    const diff = Math.ceil((exam - now) / (1000 * 60 * 60 * 24));
+    return diff;
+  }
+
+  function countdownClass(days) {
+    if (days > 10) return 'countdown-green';
+    if (days >= 4) return 'countdown-orange';
+    return 'countdown-red';
+  }
+
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  function blockItemKey(blockCode, idx) {
+    return `${blockCode}_${idx}`;
+  }
+
+  function getSubjectStats(subject) {
+    let totalTopics = 0;
+    let checkedTopics = 0;
+    subject.blocks.forEach(block => {
+      totalTopics += block.topics.length;
+      block.topics.forEach((topic, idx) => {
+        if (checkedState[blockItemKey(block.code, idx)]) checkedTopics += 1;
+      });
+    });
+    const percentage = totalTopics ? Math.round((checkedTopics / totalTopics) * 100) : 0;
+    return { totalTopics, checkedTopics, percentage };
+  }
+
+  function getGlobalStats() {
+    let totalTopics = 0;
+    let checkedTopics = 0;
+    let totalBlocks = 0;
+
+    subjects.forEach(subject => {
+      subject.blocks.forEach(block => {
+        totalBlocks += 1;
+        totalTopics += block.topics.length;
+        block.topics.forEach((topic, idx) => {
+          if (checkedState[blockItemKey(block.code, idx)]) checkedTopics += 1;
+        });
+      });
+    });
+
+    const percentage = totalTopics ? Math.round((checkedTopics / totalTopics) * 100) : 0;
+    return { totalTopics, checkedTopics, totalBlocks, percentage };
+  }
+
+  function getThemeIcon(theme) {
+    if (theme === 'dark') {
+      return `
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      `;
+    }
+    return `
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M12 2.6v2.2M12 19.2v2.2M21.4 12h-2.2M4.8 12H2.6M18.6 5.4l-1.5 1.5M6.9 17.1l-1.5 1.5M18.6 18.6l-1.5-1.5M6.9 6.9 5.4 5.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    `;
+  }
+
+  function renderFilters() {
+    const filterRoot = document.getElementById('filterChips');
+    const chips = [
+      {
+        id: 'all',
+        label: 'All subjects',
+        accent: 'linear-gradient(135deg, var(--subject-cs), var(--subject-math))',
+        count: subjects.length
+      },
+      ...subjects.map(subject => {
+        const stats = getSubjectStats(subject);
+        return {
+          id: subject.id,
+          label: subject.name,
+          accent: subject.accent,
+          count: `${stats.checkedTopics}/${stats.totalTopics}`
+        };
+      })
+    ];
+
+    filterRoot.innerHTML = chips.map(chip => `
+      <button class="chip ${currentFilter === chip.id ? 'active' : ''}" data-filter="${chip.id}" type="button">
+        <span class="chip-dot" style="background:${chip.accent}"></span>
+        <span>${chip.label}</span>
+        <span class="chip-count">${chip.count}</span>
+      </button>
+    `).join('');
+
+    filterRoot.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        currentFilter = chip.dataset.filter;
+        renderFilters();
+        applyFilter();
+        updateStickySubject();
+      });
+    });
+  }
+
+  // ========== RENDER ==========
+  const contentArea = document.getElementById('contentArea');
+
+  function render() {
+    contentArea.innerHTML = subjects.map(subject => {
+      const stats = getSubjectStats(subject);
+      const daysLeft = daysUntil(subject.examDates[0]);
+      const countdownTone = isNaN(daysLeft) || daysLeft < -1000 ? 'countdown-green' : countdownClass(daysLeft);
+      const countdownText = daysLeft > 0 ? `${daysLeft} days left` : (daysLeft === 0 ? 'Exam is today' : `${Math.abs(daysLeft)} days ago`);
+
+      const blocksHtml = subject.blocks.map(block => {
+        const open = !!blockOpenState[blockStateKey(subject.id, block.code)];
+        const blockChecked = block.topics.filter((topic, idx) => checkedState[blockItemKey(block.code, idx)]).length;
+        const blockDone = blockChecked === block.topics.length;
+
+        const topicsHtml = block.topics.map((topic, idx) => {
+          const key = blockItemKey(block.code, idx);
+          const isChecked = !!checkedState[key];
+          return `
+            <label class="checkbox-item ${isChecked ? 'checkbox-done' : ''}">
+              <input type="checkbox" class="checkbox-input" data-key="${key}" ${isChecked ? 'checked' : ''}>
+              <span class="checkbox-text">${escapeHtml(topic)}</span>
+            </label>
+          `;
+        }).join('');
+
+        return `
+          <article class="block-card ${blockDone ? 'block-done' : ''} ${open ? 'block-open' : ''}" data-block="${block.code}" data-subject="${subject.id}">
+            <button class="block-header" type="button" onclick="toggleBlock('${subject.id}', '${block.code}')">
+              <span class="block-code">${block.code}</span>
+              <span class="block-title-wrap">
+                <span class="block-title">${escapeHtml(block.title)}</span>
+                <span class="block-meta">${block.topics.length} topics</span>
+              </span>
+              <span class="block-count">${blockChecked}/${block.topics.length}</span>
+              <svg class="block-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <div class="block-body">
+              <div class="block-body-inner">
+                <div class="topic-list">${topicsHtml}</div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      return `
+        <section class="subject-section" id="subject-${subject.id}" data-subject="${subject.id}">
+          <div class="subject-shell">
+            <div class="subject-header">
+              <div class="subject-intro">
+                <div class="subject-kicker">
+                  <span class="chip-dot" style="background:${subject.accent}"></span>
+                  <span>Subject overview</span>
+                </div>
+                <h2 class="subject-title">${subject.name}</h2>
+                <div class="subject-meta">
+                  <span class="pill"><strong>Exams</strong> ${subject.exams.join(' / ')}</span>
+                  <span class="pill"><strong>Coverage</strong> ${stats.checkedTopics} / ${stats.totalTopics} topics</span>
+                  <span class="pill ${countdownTone}">${countdownText}</span>
+                </div>
+              </div>
+
+              <div class="subject-summary">
+                <div class="subject-progress-header">
+                  <span class="subject-progress-value">${stats.percentage}% complete</span>
+                  <span class="subject-caption">${subject.blocks.length} blocks</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width:${stats.percentage}%; background:linear-gradient(90deg, color-mix(in srgb, ${subject.accent} 86%, white 14%), ${subject.accent});"></div>
+                </div>
+                <div class="subject-actions">
+                  <button class="subject-action" type="button" onclick="jumpToFirstUnchecked('${subject.id}', event)">Jump to next topic</button>
+                  <button class="subject-action" type="button" onclick="toggleAllBlocks('${subject.id}', event)">Collapse / expand blocks</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-listing">${blocksHtml}</div>
+          </div>
+        </section>
+      `;
+    }).join('');
+
+    attachCheckboxListeners();
+    renderFilters();
+    applyFilter();
+    updateGlobalProgress();
+    updateStickySubject();
+  }
+
+  function attachCheckboxListeners() {
+    document.querySelectorAll('.checkbox-input').forEach(checkbox => {
+      checkbox.addEventListener('change', event => {
+        const key = event.target.dataset.key;
+        checkedState[key] = event.target.checked;
+        saveState();
+        render();
+      });
+    });
+  }
+
+  function updateGlobalProgress() {
+    const stats = getGlobalStats();
+    document.getElementById('globalProgressFill').style.width = `${stats.percentage}%`;
+    document.getElementById('globalProgressText').textContent = `${stats.checkedTopics} / ${stats.totalTopics} topics done`;
+    document.getElementById('stickyProgress').textContent = `${stats.percentage}%`;
+    document.getElementById('subjectCount').textContent = subjects.length;
+    document.getElementById('blockCount').textContent = stats.totalBlocks;
+  }
+
+  function applyFilter() {
+    subjects.forEach(subject => {
+      const section = document.getElementById(`subject-${subject.id}`);
+      if (!section) return;
+      section.classList.toggle('hidden', currentFilter !== 'all' && currentFilter !== subject.id);
+    });
+  }
+
+  function updateStickySubject() {
+    const visibleSubjects = subjects.filter(subject => currentFilter === 'all' || currentFilter === subject.id);
+    let current = visibleSubjects[0] || null;
+
+    visibleSubjects.forEach(subject => {
+      const section = document.getElementById(`subject-${subject.id}`);
+      if (!section || section.classList.contains('hidden')) return;
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 190) current = subject;
+    });
+
+    document.getElementById('stickySubject').textContent = current ? current.name : 'All Subjects';
+  }
+
+  function toggleBlock(subjectId, blockCode) {
+    const key = blockStateKey(subjectId, blockCode);
+    blockOpenState[key] = !blockOpenState[key];
+    const card = document.querySelector(`.block-card[data-subject="${subjectId}"][data-block="${blockCode}"]`);
+    if (!card) return;
+    card.classList.toggle('block-open', blockOpenState[key]);
+  }
+
+  function toggleAllBlocks(subjectId, event) {
+    if (event) event.stopPropagation();
+    const cards = Array.from(document.querySelectorAll(`.block-card[data-subject="${subjectId}"]`));
+    if (!cards.length) return;
+    const shouldOpen = cards.some(card => !card.classList.contains('block-open'));
+    cards.forEach(card => {
+      const key = blockStateKey(subjectId, card.dataset.block);
+      blockOpenState[key] = shouldOpen;
+      card.classList.toggle('block-open', shouldOpen);
+    });
+  }
+
+  function jumpToFirstUnchecked(subjectId, event) {
+    if (event) event.stopPropagation();
+    const subject = subjects.find(item => item.id === subjectId);
+    if (!subject) return;
+
+    for (const block of subject.blocks) {
+      for (let idx = 0; idx < block.topics.length; idx += 1) {
+        if (!checkedState[blockItemKey(block.code, idx)]) {
+          const key = blockStateKey(subjectId, block.code);
+          blockOpenState[key] = true;
+          const card = document.querySelector(`.block-card[data-subject="${subjectId}"][data-block="${block.code}"]`);
+          if (card) {
+            card.classList.add('block-open');
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            card.classList.add('highlight-pulse');
+            setTimeout(() => card.classList.remove('highlight-pulse'), 1100);
+          }
+          return;
+        }
+      }
+    }
+  }
+
+  // ========== THEME ==========
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.getElementById('themeToggleGlyph').innerHTML = getThemeIcon(theme);
+    document.getElementById('themeToggleLabel').textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+  }
+
+  const savedTheme = localStorage.getItem('ibStudyTheme');
+  applyTheme(savedTheme || 'light');
+
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    saveTheme(next);
+  });
+
+  // ========== RESET ==========
+  const resetModal = document.getElementById('resetModal');
+  document.getElementById('resetAllBtn').addEventListener('click', () => resetModal.classList.add('visible'));
+  document.getElementById('cancelReset').addEventListener('click', () => resetModal.classList.remove('visible'));
+  document.getElementById('confirmReset').addEventListener('click', () => {
+    checkedState = {};
+    saveState();
+    render();
+    resetModal.classList.remove('visible');
+  });
+  resetModal.addEventListener('click', event => {
+    if (event.target === resetModal) resetModal.classList.remove('visible');
+  });
+
+  // ========== EVENTS ==========
+  window.addEventListener('scroll', updateStickySubject, { passive: true });
+
+  document.addEventListener('keydown', event => {
+    if ((event.key === 'r' || event.key === 'R') && !event.metaKey && !event.ctrlKey && !event.altKey) {
+      resetModal.classList.add('visible');
+    }
+    if (event.key === 'Escape') {
+      resetModal.classList.remove('visible');
+    }
+  });
+
+  // ========== INIT ==========
+  window.toggleBlock = toggleBlock;
+  window.toggleAllBlocks = toggleAllBlocks;
+  window.jumpToFirstUnchecked = jumpToFirstUnchecked;
+  render();
+</script>
+</body>
+</html>
