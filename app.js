@@ -68,7 +68,7 @@
           'Reflection in x-axis: y = -f(x)',
           'Reflection in y-axis: y = f(-x)',
           'Combinations of transformations',
-          'Graph of y = (f(x))Â²',
+          'Graph of y = (f(x))^2',
           'Graph of y = 1/f(x)',
           'Graph of y = f(|x|)'
         ]},
@@ -89,7 +89,7 @@
           'Growth and decay models',
           'Logarithmic functions: domain, range, graphs',
           'Laws of logarithms',
-          'Solving systems of 3Ã—3 linear equations',
+          'Solving systems of 3x3 linear equations',
           'Types of solutions: unique, infinitely many, no solution'
         ]},
         { code: 'M11', title: 'Sequences, Series & Financial Math', topics: [
@@ -203,20 +203,6 @@
           'Magnetic field inside a solenoid',
           'Force on a current-carrying conductor (F = BIL)',
           'Force on a moving charge (F = qvB)'
-        ]},
-        { code: 'P9', title: 'Motion in EM Fields (Theme D)', topics: [
-          'Circular motion of a charged particle in a magnetic field',
-          'Helical motion',
-          'Velocity selector',
-          'Mass spectrometer principle'
-        ]},
-        { code: 'P10', title: 'Electromagnetic Induction (Theme D)', topics: [
-          'Magnetic flux (Phi = BA cos theta)',
-          "Faraday's law of induction",
-          "Lenz's law",
-          'EMF in a moving conductor (epsilon = BLv)',
-          'Simple AC generator',
-          'Mixed fields + mechanics problems'
         ]}
       ]
     },
@@ -281,7 +267,7 @@
           'Insertion sort: algorithm, trace',
           'Selection sort: algorithm, trace',
           'Merge sort: concept and divide/conquer idea',
-          'Big-O: O(1), O(n), O(nÂ²), O(n log n) â€” which algorithm maps to which'
+          'Big-O: O(1), O(n), O(n^2), O(n log n) - which algorithm maps to which'
         ]},
         { code: 'C7', title: 'File Handling (B2)', topics: [
           'Opening files (read, write, append modes)',
