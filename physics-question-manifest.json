@@ -1,0 +1,797 @@
+{
+  "order": [
+    "A.1",
+    "A.2",
+    "A.3",
+    "A.4",
+    "A.5",
+    "B.1",
+    "B.2",
+    "B.3",
+    "B.4",
+    "B.5",
+    "D.1",
+    "D.2",
+    "D.3"
+  ],
+  "titles": {
+    "A.1": "Kinematics",
+    "A.2": "Forces and momentum",
+    "A.3": "Work, energy and power",
+    "A.4": "Rigid body mechanics",
+    "A.5": "Galilean and special relativity",
+    "B.1": "Thermal energy transfers",
+    "B.2": "Greenhouse effect",
+    "B.3": "Gas laws",
+    "B.4": "Thermodynamics",
+    "B.5": "Current and circuits",
+    "D.1": "Gravitational fields",
+    "D.2": "Electric and magnetic fields",
+    "D.3": "Motion in electromagnetic fields"
+  },
+  "counts": {
+    "A.1": {
+      "regular": 22,
+      "mcq": 20,
+      "total": 42
+    },
+    "A.2": {
+      "regular": 40,
+      "mcq": 17,
+      "total": 57
+    },
+    "A.3": {
+      "regular": 22,
+      "mcq": 6,
+      "total": 28
+    },
+    "A.4": {
+      "regular": 12,
+      "mcq": 5,
+      "total": 17
+    },
+    "A.5": {
+      "regular": 22,
+      "mcq": 2,
+      "total": 24
+    },
+    "B.1": {
+      "regular": 10,
+      "mcq": 1,
+      "total": 11
+    },
+    "B.2": {
+      "regular": 1,
+      "mcq": 0,
+      "total": 1
+    },
+    "B.3": {
+      "regular": 2,
+      "mcq": 3,
+      "total": 5
+    },
+    "B.4": {
+      "regular": 10,
+      "mcq": 0,
+      "total": 10
+    },
+    "B.5": {
+      "regular": 38,
+      "mcq": 0,
+      "total": 38
+    },
+    "D.1": {
+      "regular": 37,
+      "mcq": 0,
+      "total": 37
+    },
+    "D.2": {
+      "regular": 52,
+      "mcq": 0,
+      "total": 52
+    },
+    "D.3": {
+      "regular": 8,
+      "mcq": 0,
+      "total": 8
+    }
+  },
+  "sources": {
+    "A.1": {
+      "regular": [
+        {
+          "file": "A1 Kinematics Worksheet (1).pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "note": "Topic worksheet",
+          "folder": "a1-kinematics-worksheet-1"
+        },
+        {
+          "file": "Revision Questions (Topic A).pdf",
+          "pages": [
+            1,
+            2
+          ],
+          "note": "Topic A revision - A.1 pages",
+          "folder": "revision-questions-topic-a"
+        },
+        {
+          "file": "A1, A2, and A3 Paper 2 (Past Papers 2025 & 2016 - 2024) New.pdf",
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            21,
+            22,
+            23,
+            24,
+            41
+          ],
+          "note": "Past-paper pages with A.1 as the primary focus",
+          "folder": "a1-a2-and-a3-paper-2-past-papers-2025-2016-2024-new"
+        }
+      ],
+      "mcq": [
+        {
+          "file": "Topic A Space, time and motion (MCQ).pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "note": "A.1 MCQ set",
+          "folder": "topic-a-space-time-and-motion-mcq"
+        },
+        {
+          "file": "A1 Space, time, and motion Paper 1 A (Past Papers) Worksheet.pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "note": "Paper 1A MCQ - A.1 range",
+          "folder": "a1-space-time-and-motion-paper-1-a-past-papers-worksheet"
+        }
+      ]
+    },
+    "A.2": {
+      "regular": [
+        {
+          "file": "A2 Forces Worksheet (2).pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "note": "Topic worksheet",
+          "folder": "a2-forces-worksheet-2"
+        },
+        {
+          "file": "Revision Questions (Topic A).pdf",
+          "pages": [
+            3,
+            5,
+            7,
+            8
+          ],
+          "note": "Topic A revision - A.2 pages",
+          "folder": "revision-questions-topic-a"
+        },
+        {
+          "file": "A1, A2, and A3 Paper 2 (Past Papers 2025 & 2016 - 2024) New.pdf",
+          "pages": [
+            1,
+            3,
+            4,
+            8,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            26,
+            27,
+            28,
+            31,
+            32,
+            33,
+            34,
+            37,
+            38
+          ],
+          "note": "Past-paper pages with A.2 as the primary focus",
+          "folder": "a1-a2-and-a3-paper-2-past-papers-2025-2016-2024-new"
+        }
+      ],
+      "mcq": [
+        {
+          "file": "A1 Space, time, and motion Paper 1 A (Past Papers) Worksheet.pdf",
+          "pages": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "note": "Paper 1A MCQ - A.2 range",
+          "folder": "a1-space-time-and-motion-paper-1-a-past-papers-worksheet"
+        }
+      ]
+    },
+    "A.3": {
+      "regular": [
+        {
+          "file": "A3 Work, energy, and Power Worksheet (3).pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "note": "Topic worksheet",
+          "folder": "a3-work-energy-and-power-worksheet-3"
+        },
+        {
+          "file": "Revision Questions (Topic A).pdf",
+          "pages": [
+            6
+          ],
+          "note": "Topic A revision - A.3 page",
+          "folder": "revision-questions-topic-a"
+        },
+        {
+          "file": "A1, A2, and A3 Paper 2 (Past Papers 2025 & 2016 - 2024) New.pdf",
+          "pages": [
+            2,
+            13,
+            35,
+            36,
+            39,
+            40,
+            42
+          ],
+          "note": "Past-paper pages with A.3 as the primary focus",
+          "folder": "a1-a2-and-a3-paper-2-past-papers-2025-2016-2024-new"
+        }
+      ],
+      "mcq": [
+        {
+          "file": "A1 Space, time, and motion Paper 1 A (Past Papers) Worksheet.pdf",
+          "pages": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "note": "Paper 1A MCQ - A.3 range",
+          "folder": "a1-space-time-and-motion-paper-1-a-past-papers-worksheet"
+        }
+      ]
+    },
+    "A.4": {
+      "regular": [
+        {
+          "file": "A4 Rigid body mechanics Worksheet (4).pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "note": "Topic worksheet",
+          "folder": "a4-rigid-body-mechanics-worksheet-4"
+        },
+        {
+          "file": "Revision Questions (Topic A).pdf",
+          "pages": [
+            9,
+            10,
+            11
+          ],
+          "note": "Topic A revision - A.4 labelled pages",
+          "folder": "revision-questions-topic-a"
+        }
+      ],
+      "mcq": [
+        {
+          "file": "A1 Space, time, and motion Paper 1 A (Past Papers) Worksheet.pdf",
+          "pages": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "note": "Paper 1A MCQ - A.4 range",
+          "folder": "a1-space-time-and-motion-paper-1-a-past-papers-worksheet"
+        }
+      ]
+    },
+    "A.5": {
+      "regular": [
+        {
+          "file": "Topic A (Relativity) Questions by topic.pdf",
+          "pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "note": "Relativity questions by topic",
+          "folder": "topic-a-relativity-questions-by-topic"
+        },
+        {
+          "file": "Revision Questions (Topic A).pdf",
+          "pages": [
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "note": "Topic A revision - A.5 labelled pages",
+          "folder": "revision-questions-topic-a"
+        }
+      ],
+      "mcq": [
+        {
+          "file": "A1 Space, time, and motion Paper 1 A (Past Papers) Worksheet.pdf",
+          "pages": [
+            36,
+            37
+          ],
+          "note": "Paper 1A MCQ - A.5 range",
+          "folder": "a1-space-time-and-motion-paper-1-a-past-papers-worksheet"
+        }
+      ]
+    },
+    "B.1": {
+      "regular": [
+        {
+          "file": "Topic B 1 (Worksheet).pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "note": "Topic worksheet",
+          "folder": "topic-b-1-worksheet"
+        },
+        {
+          "file": "Revision Questions (Topic B).pdf",
+          "pages": [
+            1,
+            2,
+            3
+          ],
+          "note": "Topic B revision - B.1 range",
+          "folder": "revision-questions-topic-b"
+        }
+      ],
+      "mcq": [
+        {
+          "file": "Thermal Physics MCQ.pdf",
+          "pages": [
+            1
+          ],
+          "note": "Thermal MCQ page with B.1-only questions",
+          "folder": "thermal-physics-mcq"
+        }
+      ]
+    },
+    "B.2": {
+      "regular": [
+        {
+          "file": "Revision Questions (Topic B).pdf",
+          "pages": [
+            4
+          ],
+          "note": "Greenhouse-effect revision page",
+          "folder": "revision-questions-topic-b"
+        }
+      ],
+      "mcq": []
+    },
+    "B.3": {
+      "regular": [
+        {
+          "file": "Revision Questions (Topic B).pdf",
+          "pages": [
+            5,
+            6
+          ],
+          "note": "Topic B revision - B.3 range",
+          "folder": "revision-questions-topic-b"
+        }
+      ],
+      "mcq": [
+        {
+          "file": "Thermal Physics MCQ.pdf",
+          "pages": [
+            3,
+            4,
+            7
+          ],
+          "note": "Thermal MCQ pages with ideal-gas questions",
+          "folder": "thermal-physics-mcq"
+        }
+      ]
+    },
+    "B.4": {
+      "regular": [
+        {
+          "file": "Questions Thermo.pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "note": "Thermodynamics worksheet",
+          "folder": "questions-thermo"
+        },
+        {
+          "file": "Revision Questions (Topic B).pdf",
+          "pages": [
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "note": "Topic B revision - B.4 range",
+          "folder": "revision-questions-topic-b"
+        }
+      ],
+      "mcq": []
+    },
+    "B.5": {
+      "regular": [
+        {
+          "file": "B.5 Current electricity (SL&HL) Worksheet.pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "note": "Topic worksheet",
+          "folder": "b-5-current-electricity-sl-hl-worksheet"
+        },
+        {
+          "file": "Revision Questions (Topic B).pdf",
+          "pages": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "note": "Topic B revision - B.5 range",
+          "folder": "revision-questions-topic-b"
+        },
+        {
+          "file": "Electric field & Electric current & Electric circuits (Questions).pdf",
+          "pages": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "note": "Circuit-question pages",
+          "folder": "electric-field-electric-current-electric-circuits-questions"
+        }
+      ],
+      "mcq": []
+    },
+    "D.1": {
+      "regular": [
+        {
+          "file": "Questions D.1.pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "note": "D.1 question set",
+          "folder": "questions-d-1"
+        },
+        {
+          "file": "Worksheet Gravity Part 1 (SL&HL).pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "note": "Gravity worksheet",
+          "folder": "worksheet-gravity-part-1-sl-hl"
+        },
+        {
+          "file": "Revision Questions (Topic D).pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "note": "Topic D revision - D.1 range",
+          "folder": "revision-questions-topic-d"
+        },
+        {
+          "file": "Topic D (Fields) Past papers All.pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "note": "Fields past-paper pages - D.1 range",
+          "folder": "topic-d-fields-past-papers-all"
+        },
+        {
+          "file": "Electric field & Electric current & Electric circuits (Questions).pdf",
+          "pages": [
+            17,
+            18
+          ],
+          "note": "Gravitational-potential comparison pages",
+          "folder": "electric-field-electric-current-electric-circuits-questions"
+        }
+      ],
+      "mcq": []
+    },
+    "D.2": {
+      "regular": [
+        {
+          "file": "D.2 Electric force (Questions).pdf",
+          "pages": [
+            1,
+            2
+          ],
+          "note": "Electric force question set",
+          "folder": "d-2-electric-force-questions"
+        },
+        {
+          "file": "D.2 Electric field (Questions).pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "note": "Electric field question set",
+          "folder": "d-2-electric-field-questions"
+        },
+        {
+          "file": "Electric field & Electric current & Electric circuits (Questions).pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "note": "Electric field and potential pages",
+          "folder": "electric-field-electric-current-electric-circuits-questions"
+        },
+        {
+          "file": "Revision Questions (Topic D).pdf",
+          "pages": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "note": "Topic D revision - D.2 range",
+          "folder": "revision-questions-topic-d"
+        },
+        {
+          "file": "Topic D (Fields) Past papers All.pdf",
+          "pages": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42
+          ],
+          "note": "Fields past-paper pages - D.2 range",
+          "folder": "topic-d-fields-past-papers-all"
+        }
+      ],
+      "mcq": []
+    },
+    "D.3": {
+      "regular": [
+        {
+          "file": "Revision Questions (Topic D).pdf",
+          "pages": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "note": "Topic D revision - D.3 range",
+          "folder": "revision-questions-topic-d"
+        },
+        {
+          "file": "Topic D (Fields) Past papers All.pdf",
+          "pages": [
+            43,
+            44,
+            45,
+            46
+          ],
+          "note": "Fields past-paper pages - D.3 range",
+          "folder": "topic-d-fields-past-papers-all"
+        }
+      ],
+      "mcq": []
+    }
+  }
+}
