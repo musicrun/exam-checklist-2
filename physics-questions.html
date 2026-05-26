@@ -17,6 +17,19 @@
       --blue: #285b7b;
       --danger: #8a3d2b;
     }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #111713;
+      --paper: #18201b;
+      --ink: #edf4ed;
+      --muted: #aab8af;
+      --line: rgba(237, 244, 237, .16);
+      --shadow: 0 24px 80px rgba(0, 0, 0, .42);
+      --gold: #f0b34a;
+      --green: #69c59d;
+      --blue: #76b9dc;
+      --danger: #e0a193;
+    }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
@@ -27,6 +40,12 @@
         radial-gradient(circle at 92% 0%, rgba(40,91,123,.16), transparent 34rem),
         linear-gradient(135deg, #fbf5ea, #efe3cf 58%, #dfe7dc);
       font-family: Georgia, 'Times New Roman', serif;
+    }
+    :root[data-theme="dark"] body {
+      background:
+        radial-gradient(circle at 10% 8%, rgba(240,179,74,.16), transparent 28rem),
+        radial-gradient(circle at 92% 0%, rgba(118,185,220,.14), transparent 34rem),
+        linear-gradient(135deg, #0f1512, #151d18 58%, #0b1110);
     }
     body::before {
       content: '';
@@ -39,6 +58,12 @@
         linear-gradient(90deg, rgba(23,33,29,.04) 1px, transparent 1px);
       background-size: 32px 32px;
       mask-image: linear-gradient(to bottom, black, transparent 88%);
+    }
+    :root[data-theme="dark"] body::before {
+      opacity: .16;
+      background-image:
+        linear-gradient(rgba(237,244,237,.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(237,244,237,.05) 1px, transparent 1px);
     }
     a { color: inherit; }
     .hero {
@@ -63,7 +88,6 @@
       line-height: .88;
       letter-spacing: -.075em;
     }
-    .summary { max-width: 760px; color: #3d4640; font-size: clamp(1.06rem, 2vw, 1.34rem); line-height: 1.55; }
     .scope-panel { display: grid; gap: 14px; padding: 18px; border: 1px solid var(--line); background: rgba(255,250,240,.65); box-shadow: var(--shadow); transform: rotate(.75deg); }
     .scope-panel article { padding: 22px; background: rgba(255,253,248,.92); border-left: 7px solid var(--accent); }
     .scope-panel strong { display: block; color: var(--accent); font-size: 2.4rem; line-height: 1; }
@@ -74,7 +98,7 @@
       top: 0;
       z-index: 20;
       display: grid;
-      grid-template-columns: minmax(220px, 380px) auto 1fr;
+      grid-template-columns: minmax(220px, 380px) auto auto 1fr;
       gap: 14px;
       align-items: center;
       padding: 13px clamp(20px, 5vw, 76px);
@@ -128,6 +152,46 @@
     .lightbox.open { display: grid; }
     .lightbox button { position: fixed; top: 18px; right: 18px; border: 0; border-radius: 999px; padding: 10px 14px; color: var(--ink); background: #fffaf0; cursor: pointer; font: 900 .8rem 'Trebuchet MS', Verdana, sans-serif; }
     .lightbox img { max-width: min(100%, 1100px); max-height: 92vh; background: #fff; box-shadow: 0 24px 80px rgba(0,0,0,.55); }
+    :root[data-theme="dark"] .scope-panel,
+    :root[data-theme="dark"] .toolbar,
+    :root[data-theme="dark"] .rail,
+    :root[data-theme="dark"] .notice,
+    :root[data-theme="dark"] .syllabus-section {
+      background: rgba(18, 25, 21, .82);
+    }
+    :root[data-theme="dark"] .scope-panel article,
+    :root[data-theme="dark"] .toolbar input,
+    :root[data-theme="dark"] .toolbar button,
+    :root[data-theme="dark"] .nav-scroll a,
+    :root[data-theme="dark"] .rail a,
+    :root[data-theme="dark"] .lane-title,
+    :root[data-theme="dark"] .source-card,
+    :root[data-theme="dark"] .empty,
+    :root[data-theme="dark"] .lightbox button {
+      background: rgba(23, 31, 26, .96);
+      color: var(--ink);
+      border-color: var(--line);
+    }
+    :root[data-theme="dark"] .rail a {
+      background: rgba(255, 255, 255, .045);
+    }
+    :root[data-theme="dark"] .rail a:hover,
+    :root[data-theme="dark"] .toolbar button:hover,
+    :root[data-theme="dark"] .nav-scroll a:hover {
+      background: rgba(255, 255, 255, .09);
+    }
+    :root[data-theme="dark"] .notice {
+      color: #f0c7bc;
+      border-color: rgba(240, 199, 188, .28);
+    }
+    :root[data-theme="dark"] .page-card {
+      background: #f8f8f5;
+      border-color: rgba(255, 255, 255, .12);
+    }
+    :root[data-theme="dark"] .page-button img {
+      background: #fff;
+      border-color: rgba(0, 0, 0, .08);
+    }
     @media (max-width: 980px) {
       .hero, .toolbar, .layout { grid-template-columns: 1fr; }
       .scope-panel { transform: none; }
@@ -144,13 +208,13 @@
   <header class="hero">
     <div>
       <p class="kicker">IB Physics HL / cleaned syllabus bank</p>
-      <h1>Questions sorted by exact syllabus code.</h1>
-      <p class="summary">A focused bank for Topic A, Topic B, and D.1-D.3. Each section is split into Regular Questions and MCQ when both exist, with broad PDFs split into the correct syllabus code instead of being dumped as mixed paper blocks.</p>
+      <h1>Mr Khaled IB Physics Question Bank</h1>
     </div>
     <aside class="scope-panel" aria-label="Topic summary"><article style="--accent:#1f6f55"><strong>A</strong><h2>Space, time and motion</h2><p>5 syllabus sections / 168 rendered pages</p></article><article style="--accent:#9b641f"><strong>B</strong><h2>The particulate nature of matter</h2><p>5 syllabus sections / 65 rendered pages</p></article><article style="--accent:#285b7b"><strong>D</strong><h2>Fields</h2><p>3 syllabus sections / 97 rendered pages</p></article></aside>
   </header>
   <div class="toolbar">
     <input id="search" type="search" placeholder="Search A.2, momentum, circuits, or a PDF name..." aria-label="Search question bank">
+    <button id="themeToggle" type="button" aria-pressed="false">Dark mode</button>
     <button id="expandVisible" type="button">Open visible</button>
     <nav class="nav-scroll" aria-label="Quick topic navigation"><a href="#A-1">A.1</a><a href="#A-2">A.2</a><a href="#A-3">A.3</a><a href="#A-4">A.4</a><a href="#A-5">A.5</a><a href="#B-1">B.1</a><a href="#B-2">B.2</a><a href="#B-3">B.3</a><a href="#B-4">B.4</a><a href="#B-5">B.5</a><a href="#D-1">D.1</a><a href="#D-2">D.2</a><a href="#D-3">D.3</a></nav>
   </div>
@@ -827,9 +891,22 @@
     const search = document.querySelector('#search');
     const sections = [...document.querySelectorAll('.syllabus-section')];
     const empty = document.querySelector('#empty');
+    const themeToggle = document.querySelector('#themeToggle');
     const expandVisible = document.querySelector('#expandVisible');
     const lightbox = document.querySelector('#lightbox');
     const lightboxImage = lightbox.querySelector('img');
+
+    const storedTheme = localStorage.getItem('physics-theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
+    document.documentElement.dataset.theme = initialTheme;
+    updateThemeButton(initialTheme);
+
+    function updateThemeButton(theme) {
+      const isDark = theme === 'dark';
+      themeToggle.textContent = isDark ? 'Light mode' : 'Dark mode';
+      themeToggle.setAttribute('aria-pressed', String(isDark));
+    }
 
     function hydrateImages(root) {
       root.querySelectorAll('img[data-src]').forEach((img) => {
@@ -863,6 +940,12 @@
     }
 
     search.addEventListener('input', applySearch);
+    themeToggle.addEventListener('click', () => {
+      const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = nextTheme;
+      localStorage.setItem('physics-theme', nextTheme);
+      updateThemeButton(nextTheme);
+    });
     expandVisible.addEventListener('click', () => {
       const cards = [...document.querySelectorAll('.source-card:not([hidden])')];
       const shouldOpen = cards.some((card) => !card.open);
