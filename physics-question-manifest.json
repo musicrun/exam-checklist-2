@@ -32,68 +32,68 @@
   "counts": {
     "A.1": {
       "regular": 22,
-      "mcq": 20,
-      "total": 42
+      "mcq": 22,
+      "total": 44
     },
     "A.2": {
-      "regular": 40,
-      "mcq": 17,
-      "total": 57
+      "regular": 46,
+      "mcq": 18,
+      "total": 64
     },
     "A.3": {
-      "regular": 22,
-      "mcq": 6,
-      "total": 28
-    },
-    "A.4": {
-      "regular": 12,
-      "mcq": 5,
-      "total": 17
-    },
-    "A.5": {
-      "regular": 22,
-      "mcq": 2,
-      "total": 24
-    },
-    "B.1": {
-      "regular": 10,
-      "mcq": 1,
-      "total": 11
-    },
-    "B.2": {
-      "regular": 1,
-      "mcq": 0,
-      "total": 1
-    },
-    "B.3": {
-      "regular": 2,
-      "mcq": 3,
-      "total": 5
-    },
-    "B.4": {
-      "regular": 10,
-      "mcq": 0,
-      "total": 10
-    },
-    "B.5": {
-      "regular": 38,
-      "mcq": 0,
+      "regular": 29,
+      "mcq": 9,
       "total": 38
     },
+    "A.4": {
+      "regular": 14,
+      "mcq": 7,
+      "total": 21
+    },
+    "A.5": {
+      "regular": 29,
+      "mcq": 3,
+      "total": 32
+    },
+    "B.1": {
+      "regular": 20,
+      "mcq": 3,
+      "total": 23
+    },
+    "B.2": {
+      "regular": 4,
+      "mcq": 3,
+      "total": 7
+    },
+    "B.3": {
+      "regular": 8,
+      "mcq": 9,
+      "total": 17
+    },
+    "B.4": {
+      "regular": 13,
+      "mcq": 5,
+      "total": 18
+    },
+    "B.5": {
+      "regular": 53,
+      "mcq": 4,
+      "total": 57
+    },
     "D.1": {
-      "regular": 37,
-      "mcq": 0,
-      "total": 37
+      "regular": 41,
+      "mcq": 5,
+      "total": 46
     },
     "D.2": {
-      "regular": 52,
-      "mcq": 0,
-      "total": 52
+      "regular": 56,
+      "mcq": 5,
+      "total": 61
     },
     "D.3": {
       "regular": 8,
-      "mcq": 0,
-      "total": 8
+      "mcq": 3,
+      "total": 11
     }
   },
   "sources": {
@@ -177,6 +177,26 @@
           ],
           "note": "Paper 1A MCQ - A.1 range",
           "folder": "a1-space-time-and-motion-paper-1-a-past-papers-worksheet"
+        },
+        {
+          "file": "Physics Paper 1 A (Mock 2026).pdf",
+          "items": [
+            {
+              "label": "q. 1",
+              "question": 1,
+              "page": 2,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q001.png"
+            },
+            {
+              "label": "q. 2",
+              "question": 2,
+              "page": 2,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q002.png"
+            }
+          ],
+          "note": "Mock 2026 Paper 1A: kinematics MCQ crops",
+          "folder": "physics-paper-1-a-mock-2026",
+          "audit": "physics-folder-2026-05-27"
         }
       ]
     },
@@ -242,6 +262,36 @@
           ],
           "note": "Past-paper pages with A.2 as the primary focus",
           "folder": "a1-a2-and-a3-paper-2-past-papers-2025-2016-2024-new"
+        },
+        {
+          "file": "Revision Questions (Topic A).pdf",
+          "pages": [
+            4
+          ],
+          "note": "Audited folder add-on: banked-circular-motion forces page",
+          "folder": "revision-questions-topic-a",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "A1, A2, and A3 Paper 2 (Past Papers 2025 & 2016 - 2024) New.pdf",
+          "pages": [
+            5,
+            7,
+            25
+          ],
+          "note": "Audited folder add-on: force, buoyancy, collision, and momentum pages",
+          "folder": "a1-a2-and-a3-paper-2-past-papers-2025-2016-2024-new",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics Paper 2 (Mock 2026).pdf",
+          "pages": [
+            2,
+            3
+          ],
+          "note": "Mock 2026 Paper 2: trampoline force, acceleration, and momentum question",
+          "folder": "physics-paper-2-mock-2026",
+          "audit": "physics-folder-2026-05-27"
         }
       ],
       "mcq": [
@@ -268,6 +318,20 @@
           ],
           "note": "Paper 1A MCQ - A.2 range",
           "folder": "a1-space-time-and-motion-paper-1-a-past-papers-worksheet"
+        },
+        {
+          "file": "Physics Paper 1 A (Mock 2026).pdf",
+          "items": [
+            {
+              "label": "q. 4",
+              "question": 4,
+              "page": 4,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q004.png"
+            }
+          ],
+          "note": "Mock 2026 Paper 1A: forces and momentum MCQ crop",
+          "folder": "physics-paper-1-a-mock-2026",
+          "audit": "physics-folder-2026-05-27"
         }
       ]
     },
@@ -315,6 +379,37 @@
           ],
           "note": "Past-paper pages with A.3 as the primary focus",
           "folder": "a1-a2-and-a3-paper-2-past-papers-2025-2016-2024-new"
+        },
+        {
+          "file": "A1, A2, and A3 Paper 2 (Past Papers 2025 & 2016 - 2024) New.pdf",
+          "pages": [
+            43,
+            44
+          ],
+          "note": "Audited folder add-on: spring energy, work, and motor-efficiency pages",
+          "folder": "a1-a2-and-a3-paper-2-past-papers-2025-2016-2024-new",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Important Question (Wind energy).pdf",
+          "pages": [
+            1,
+            2,
+            3
+          ],
+          "note": "Wind-energy transfer and power question",
+          "folder": "important-question-wind-energy",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Specimenn paper 2 2025.pdf",
+          "pages": [
+            24,
+            25
+          ],
+          "note": "Specimen Paper 2: sea-wave energy and power pages",
+          "folder": "specimenn-paper-2-2025",
+          "audit": "physics-folder-2026-05-27"
         }
       ],
       "mcq": [
@@ -330,6 +425,32 @@
           ],
           "note": "Paper 1A MCQ - A.3 range",
           "folder": "a1-space-time-and-motion-paper-1-a-past-papers-worksheet"
+        },
+        {
+          "file": "Physics Paper 1 A (Mock 2026).pdf",
+          "items": [
+            {
+              "label": "q. 3",
+              "question": 3,
+              "page": 3,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q003.png"
+            },
+            {
+              "label": "q. 5",
+              "question": 5,
+              "page": 4,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q005.png"
+            },
+            {
+              "label": "q. 6",
+              "question": 6,
+              "page": 5,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q006.png"
+            }
+          ],
+          "note": "Mock 2026 Paper 1A: work, energy, and power MCQ crops",
+          "folder": "physics-paper-1-a-mock-2026",
+          "audit": "physics-folder-2026-05-27"
         }
       ]
     },
@@ -360,6 +481,16 @@
           ],
           "note": "Topic A revision - A.4 labelled pages",
           "folder": "revision-questions-topic-a"
+        },
+        {
+          "file": "Physics Paper 2 (Mock 2025).pdf",
+          "pages": [
+            5,
+            6
+          ],
+          "note": "Mock 2025 Paper 2: rolling disk rigid-body question",
+          "folder": "physics-paper-2-mock-2025",
+          "audit": "physics-folder-2026-05-27"
         }
       ],
       "mcq": [
@@ -374,6 +505,26 @@
           ],
           "note": "Paper 1A MCQ - A.4 range",
           "folder": "a1-space-time-and-motion-paper-1-a-past-papers-worksheet"
+        },
+        {
+          "file": "Physics Paper 1 A (Mock 2026).pdf",
+          "items": [
+            {
+              "label": "q. 7",
+              "question": 7,
+              "page": 5,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q007.png"
+            },
+            {
+              "label": "q. 8",
+              "question": 8,
+              "page": 6,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q008.png"
+            }
+          ],
+          "note": "Mock 2026 Paper 1A: rigid-body mechanics MCQ crops",
+          "folder": "physics-paper-1-a-mock-2026",
+          "audit": "physics-folder-2026-05-27"
         }
       ]
     },
@@ -414,6 +565,45 @@
           ],
           "note": "Topic A revision - A.5 labelled pages",
           "folder": "revision-questions-topic-a"
+        },
+        {
+          "file": "Physics Paper 2 (Mock 2025).pdf",
+          "pages": [
+            7,
+            8
+          ],
+          "note": "Mock 2025 Paper 2: spacetime diagram relativity question",
+          "folder": "physics-paper-2-mock-2025",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics Paper 2 (Mock 2026).pdf",
+          "pages": [
+            6,
+            7
+          ],
+          "note": "Mock 2026 Paper 2: spacetime diagram relativity question",
+          "folder": "physics-paper-2-mock-2026",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics PreMock 12 Paper 2 2025 (Questions).pdf",
+          "pages": [
+            6,
+            7
+          ],
+          "note": "PreMock 2025 Paper 2: spacetime diagram relativity question",
+          "folder": "physics-premock-12-paper-2-2025-questions",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Specimenn paper 2 2025.pdf",
+          "pages": [
+            3
+          ],
+          "note": "Specimen Paper 2: relativity question",
+          "folder": "specimenn-paper-2-2025",
+          "audit": "physics-folder-2026-05-27"
         }
       ],
       "mcq": [
@@ -425,6 +615,20 @@
           ],
           "note": "Paper 1A MCQ - A.5 range",
           "folder": "a1-space-time-and-motion-paper-1-a-past-papers-worksheet"
+        },
+        {
+          "file": "Physics Paper 1 A (Mock 2026).pdf",
+          "items": [
+            {
+              "label": "q. 9",
+              "question": 9,
+              "page": 6,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q009.png"
+            }
+          ],
+          "note": "Mock 2026 Paper 1A: relativity MCQ crop",
+          "folder": "physics-paper-1-a-mock-2026",
+          "audit": "physics-folder-2026-05-27"
         }
       ]
     },
@@ -453,6 +657,56 @@
           ],
           "note": "Topic B revision - B.1 range",
           "folder": "revision-questions-topic-b"
+        },
+        {
+          "file": "A1, A2, and A3 Paper 2 (Past Papers 2025 & 2016 - 2024) New.pdf",
+          "pages": [
+            7
+          ],
+          "note": "Audited folder add-on: lake-ice conduction and latent-heat page",
+          "folder": "a1-a2-and-a3-paper-2-past-papers-2025-2016-2024-new",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics Paper 1 B (Mock 2025).pdf",
+          "pages": [
+            4,
+            5
+          ],
+          "note": "Mock 2025 Paper 1B: latent heat of fusion data question",
+          "folder": "physics-paper-1-b-mock-2025",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics Paper 1 B (Mock 2026).pdf",
+          "pages": [
+            5,
+            6,
+            7
+          ],
+          "note": "Mock 2026 Paper 1B: latent heat of vaporization data question",
+          "folder": "physics-paper-1-b-mock-2026",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics_paper_paper 1B (Revision).pdf",
+          "pages": [
+            32,
+            33,
+            34
+          ],
+          "note": "Paper 1B revision: latent heat of vaporization data-analysis question",
+          "folder": "physics-paper-paper-1b-revision",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Specimenn paper 2 2025.pdf",
+          "pages": [
+            15
+          ],
+          "note": "Specimen Paper 2: paraffin thermal-energy transfer question",
+          "folder": "specimenn-paper-2-2025",
+          "audit": "physics-folder-2026-05-27"
         }
       ],
       "mcq": [
@@ -463,6 +717,29 @@
           ],
           "note": "Thermal MCQ page with B.1-only questions",
           "folder": "thermal-physics-mcq"
+        },
+        {
+          "file": "Thermal Physics MCQ.pdf",
+          "pages": [
+            5
+          ],
+          "note": "Audited folder add-on: latent heat and thermal-energy MCQ page",
+          "folder": "thermal-physics-mcq",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics Paper 1 A (Mock 2026).pdf",
+          "items": [
+            {
+              "label": "q. 15",
+              "question": 15,
+              "page": 10,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q015.png"
+            }
+          ],
+          "note": "Mock 2026 Paper 1A: thermal-energy-transfer MCQ crop",
+          "folder": "physics-paper-1-a-mock-2026",
+          "audit": "physics-folder-2026-05-27"
         }
       ]
     },
@@ -475,9 +752,55 @@
           ],
           "note": "Greenhouse-effect revision page",
           "folder": "revision-questions-topic-b"
+        },
+        {
+          "file": "Physics Paper 2 (Mock 2026).pdf",
+          "pages": [
+            10,
+            11,
+            12
+          ],
+          "note": "Mock 2026 Paper 2: greenhouse gas and Earth energy-balance pages",
+          "folder": "physics-paper-2-mock-2026",
+          "audit": "physics-folder-2026-05-27"
         }
       ],
-      "mcq": []
+      "mcq": [
+        {
+          "file": "Physics Paper 1 A (Mock 2026).pdf",
+          "items": [
+            {
+              "label": "q. 13",
+              "question": 13,
+              "page": 8,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q013.png"
+            },
+            {
+              "label": "q. 14",
+              "question": 14,
+              "page": 9,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q014.png"
+            }
+          ],
+          "note": "Mock 2026 Paper 1A: black-body and climate-model MCQ crops",
+          "folder": "physics-paper-1-a-mock-2026",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Specimenn paper 1A 2025.pdf",
+          "items": [
+            {
+              "label": "q. 13",
+              "question": 13,
+              "page": 8,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q013.png"
+            }
+          ],
+          "note": "Specimen Paper 1A: black-body radiation MCQ crop",
+          "folder": "specimenn-paper-1a-2025",
+          "audit": "physics-folder-2026-05-27"
+        }
+      ]
     },
     "B.3": {
       "regular": [
@@ -489,6 +812,36 @@
           ],
           "note": "Topic B revision - B.3 range",
           "folder": "revision-questions-topic-b"
+        },
+        {
+          "file": "A1, A2, and A3 Paper 2 (Past Papers 2025 & 2016 - 2024) New.pdf",
+          "pages": [
+            6
+          ],
+          "note": "Audited folder add-on: water-density anomaly page",
+          "folder": "a1-a2-and-a3-paper-2-past-papers-2025-2016-2024-new",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics_paper_paper 1B (Revision).pdf",
+          "pages": [
+            8,
+            9,
+            10
+          ],
+          "note": "Paper 1B revision: gas pressure-volume data-analysis pages",
+          "folder": "physics-paper-paper-1b-revision",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics_paper_paper 1B (Revision).pdf",
+          "pages": [
+            30,
+            31
+          ],
+          "note": "Paper 1B revision: real-gas pressure-volume data-analysis pages",
+          "folder": "physics-paper-paper-1b-revision",
+          "audit": "physics-folder-2026-05-27"
         }
       ],
       "mcq": [
@@ -501,6 +854,56 @@
           ],
           "note": "Thermal MCQ pages with ideal-gas questions",
           "folder": "thermal-physics-mcq"
+        },
+        {
+          "file": "Thermal Physics MCQ.pdf",
+          "pages": [
+            2,
+            6
+          ],
+          "note": "Audited folder add-on: ideal-gas and temperature-scale MCQ pages",
+          "folder": "thermal-physics-mcq",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics Paper 1 A (Mock 2026).pdf",
+          "items": [
+            {
+              "label": "q. 10",
+              "question": 10,
+              "page": 7,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q010.png"
+            },
+            {
+              "label": "q. 11",
+              "question": 11,
+              "page": 7,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q011.png"
+            }
+          ],
+          "note": "Mock 2026 Paper 1A: ideal-gas MCQ crops",
+          "folder": "physics-paper-1-a-mock-2026",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Specimenn paper 1A 2025.pdf",
+          "items": [
+            {
+              "label": "q. 10",
+              "question": 10,
+              "page": 7,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q010.png"
+            },
+            {
+              "label": "q. 17",
+              "question": 17,
+              "page": 10,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q017.png"
+            }
+          ],
+          "note": "Specimen Paper 1A: gas-law MCQ crops",
+          "folder": "specimenn-paper-1a-2025",
+          "audit": "physics-folder-2026-05-27"
         }
       ]
     },
@@ -529,9 +932,75 @@
           ],
           "note": "Topic B revision - B.4 range",
           "folder": "revision-questions-topic-b"
+        },
+        {
+          "file": "Physics Paper 2 (Mock 2026).pdf",
+          "pages": [
+            8,
+            9
+          ],
+          "note": "Mock 2026 Paper 2: ideal-gas thermodynamic process question",
+          "folder": "physics-paper-2-mock-2026",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Specimenn paper 2 2025.pdf",
+          "pages": [
+            26
+          ],
+          "note": "Specimen Paper 2: second-law steam turbine question",
+          "folder": "specimenn-paper-2-2025",
+          "audit": "physics-folder-2026-05-27"
         }
       ],
-      "mcq": []
+      "mcq": [
+        {
+          "file": "Physics Paper 1 A (Mock 2026).pdf",
+          "items": [
+            {
+              "label": "q. 12",
+              "question": 12,
+              "page": 7,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q012.png"
+            },
+            {
+              "label": "q. 16",
+              "question": 16,
+              "page": 11,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q016.png"
+            },
+            {
+              "label": "q. 17",
+              "question": 17,
+              "page": 11,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q017.png"
+            }
+          ],
+          "note": "Mock 2026 Paper 1A: thermodynamics MCQ crops",
+          "folder": "physics-paper-1-a-mock-2026",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Specimenn paper 1A 2025.pdf",
+          "items": [
+            {
+              "label": "q. 11",
+              "question": 11,
+              "page": 7,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q011.png"
+            },
+            {
+              "label": "q. 12",
+              "question": 12,
+              "page": 7,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q012.png"
+            }
+          ],
+          "note": "Specimen Paper 1A: thermodynamics MCQ crops",
+          "folder": "specimenn-paper-1a-2025",
+          "audit": "physics-folder-2026-05-27"
+        }
+      ]
     },
     "B.5": {
       "regular": [
@@ -593,9 +1062,113 @@
           ],
           "note": "Circuit-question pages",
           "folder": "electric-field-electric-current-electric-circuits-questions"
+        },
+        {
+          "file": "A1, A2, and A3 Paper 2 (Past Papers 2025 & 2016 - 2024) New.pdf",
+          "pages": [
+            29,
+            30
+          ],
+          "note": "Audited folder add-on: electric bicycle battery, emf, and internal-resistance pages",
+          "folder": "a1-a2-and-a3-paper-2-past-papers-2025-2016-2024-new",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics_paper_paper 1B (Revision).pdf",
+          "pages": [
+            5,
+            6,
+            7
+          ],
+          "note": "Paper 1B revision: internal resistance of a cell data question",
+          "folder": "physics-paper-paper-1b-revision",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics_paper_paper 1B (Revision).pdf",
+          "pages": [
+            12,
+            13,
+            14
+          ],
+          "note": "Paper 1B revision: capacitor circuit data-analysis question",
+          "folder": "physics-paper-paper-1b-revision",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics_paper_paper 1B (Revision).pdf",
+          "pages": [
+            23,
+            24,
+            25
+          ],
+          "note": "Paper 1B revision: electrical resistance graph question",
+          "folder": "physics-paper-paper-1b-revision",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics_paper_paper 1B (Revision).pdf",
+          "pages": [
+            35,
+            36
+          ],
+          "note": "Paper 1B revision: resistor power and internal resistance question",
+          "folder": "physics-paper-paper-1b-revision",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics PreMock 12 Paper 2 2025 (Questions).pdf",
+          "pages": [
+            13,
+            14
+          ],
+          "note": "PreMock 2025 Paper 2: resistor network and I-V circuit question",
+          "folder": "physics-premock-12-paper-2-2025-questions",
+          "audit": "physics-folder-2026-05-27"
         }
       ],
-      "mcq": []
+      "mcq": [
+        {
+          "file": "Physics Paper 1 A (Mock 2026).pdf",
+          "items": [
+            {
+              "label": "q. 18",
+              "question": 18,
+              "page": 12,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q018.png"
+            },
+            {
+              "label": "q. 19",
+              "question": 19,
+              "page": 13,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q019.png"
+            }
+          ],
+          "note": "Mock 2026 Paper 1A: current and circuits MCQ crops",
+          "folder": "physics-paper-1-a-mock-2026",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Specimenn paper 1A 2025.pdf",
+          "items": [
+            {
+              "label": "q. 15",
+              "question": 15,
+              "page": 9,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q015.png"
+            },
+            {
+              "label": "q. 16",
+              "question": 16,
+              "page": 10,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q016.png"
+            }
+          ],
+          "note": "Specimen Paper 1A: current and circuits MCQ crops",
+          "folder": "specimenn-paper-1a-2025",
+          "audit": "physics-folder-2026-05-27"
+        }
+      ]
     },
     "D.1": {
       "regular": [
@@ -670,9 +1243,76 @@
           ],
           "note": "Gravitational-potential comparison pages",
           "folder": "electric-field-electric-current-electric-circuits-questions"
+        },
+        {
+          "file": "Specimenn paper 2 2025.pdf",
+          "pages": [
+            6,
+            7
+          ],
+          "note": "Specimen Paper 2: satellite orbit and gravitational energy pages",
+          "folder": "specimenn-paper-2-2025",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Physics PreMock 12 Paper 2 2025 (Questions).pdf",
+          "pages": [
+            17,
+            18
+          ],
+          "note": "PreMock 2025 Paper 2: Earth-Moon gravitational field and potential pages",
+          "folder": "physics-premock-12-paper-2-2025-questions",
+          "audit": "physics-folder-2026-05-27"
         }
       ],
-      "mcq": []
+      "mcq": [
+        {
+          "file": "Physics Paper 1 A (Mock 2026).pdf",
+          "items": [
+            {
+              "label": "q. 27",
+              "question": 27,
+              "page": 19,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q027.png"
+            },
+            {
+              "label": "q. 28",
+              "question": 28,
+              "page": 20,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q028.png"
+            }
+          ],
+          "note": "Mock 2026 Paper 1A: gravitational-fields MCQ crops",
+          "folder": "physics-paper-1-a-mock-2026",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Specimenn paper 1A 2025.pdf",
+          "items": [
+            {
+              "label": "q. 25",
+              "question": 25,
+              "page": 14,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q025.png"
+            },
+            {
+              "label": "q. 28",
+              "question": 28,
+              "page": 16,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q028.png"
+            },
+            {
+              "label": "q. 30",
+              "question": 30,
+              "page": 17,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q030.png"
+            }
+          ],
+          "note": "Specimen Paper 1A: gravitational-fields MCQ crops",
+          "folder": "specimenn-paper-1a-2025",
+          "audit": "physics-folder-2026-05-27"
+        }
+      ]
     },
     "D.2": {
       "regular": [
@@ -762,9 +1402,68 @@
           ],
           "note": "Fields past-paper pages - D.2 range",
           "folder": "topic-d-fields-past-papers-all"
+        },
+        {
+          "file": "Specimenn paper 1B 2025.pdf",
+          "pages": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "note": "Specimen Paper 1B: conducting ball between charged plates data question",
+          "folder": "specimenn-paper-1b-2025",
+          "audit": "physics-folder-2026-05-27"
         }
       ],
-      "mcq": []
+      "mcq": [
+        {
+          "file": "Physics Paper 1 A (Mock 2026).pdf",
+          "items": [
+            {
+              "label": "q. 29",
+              "question": 29,
+              "page": 20,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q029.png"
+            }
+          ],
+          "note": "Mock 2026 Paper 1A: electric-fields MCQ crop",
+          "folder": "physics-paper-1-a-mock-2026",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Specimenn paper 1A 2025.pdf",
+          "items": [
+            {
+              "label": "q. 24",
+              "question": 24,
+              "page": 14,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q024.png"
+            },
+            {
+              "label": "q. 27",
+              "question": 27,
+              "page": 15,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q027.png"
+            },
+            {
+              "label": "q. 31",
+              "question": 31,
+              "page": 18,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q031.png"
+            },
+            {
+              "label": "q. 32",
+              "question": 32,
+              "page": 18,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q032.png"
+            }
+          ],
+          "note": "Specimen Paper 1A: electric-fields MCQ crops",
+          "folder": "specimenn-paper-1a-2025",
+          "audit": "physics-folder-2026-05-27"
+        }
+      ]
     },
     "D.3": {
       "regular": [
@@ -791,7 +1490,42 @@
           "folder": "topic-d-fields-past-papers-all"
         }
       ],
-      "mcq": []
+      "mcq": [
+        {
+          "file": "Physics Paper 1 A (Mock 2026).pdf",
+          "items": [
+            {
+              "label": "q. 30",
+              "question": 30,
+              "page": 21,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q030.png"
+            },
+            {
+              "label": "q. 31",
+              "question": 31,
+              "page": 21,
+              "image": "physics-question-images/physics-paper-1-a-mock-2026/q031.png"
+            }
+          ],
+          "note": "Mock 2026 Paper 1A: magnetic-force and charged-particle MCQ crops",
+          "folder": "physics-paper-1-a-mock-2026",
+          "audit": "physics-folder-2026-05-27"
+        },
+        {
+          "file": "Specimenn paper 1A 2025.pdf",
+          "items": [
+            {
+              "label": "q. 26",
+              "question": 26,
+              "page": 15,
+              "image": "physics-question-images/specimenn-paper-1a-2025/q026.png"
+            }
+          ],
+          "note": "Specimen Paper 1A: magnetic-force MCQ crop",
+          "folder": "specimenn-paper-1a-2025",
+          "audit": "physics-folder-2026-05-27"
+        }
+      ]
     }
   }
 }
