@@ -6,64 +6,53 @@
   <title>IB Physics Question Bank - A, B, D.1-D.3</title>
   <style>
     :root {
-      --bg: #f2eadb;
-      --paper: #fffaf0;
-      --ink: #17211d;
-      --muted: #667069;
-      --line: rgba(23, 33, 29, .14);
-      --shadow: 0 24px 70px rgba(28, 34, 30, .13);
-      --gold: #d89a2b;
-      --green: #1f6f55;
-      --blue: #285b7b;
+      --bg: #ffffff;
+      --paper: #ffffff;
+      --ink: #050505;
+      --muted: #575757;
+      --line: rgba(5, 5, 5, .16);
+      --shadow: 0 24px 70px rgba(5, 5, 5, .10);
+      --gold: #111111;
+      --green: #146c4f;
+      --blue: #1f5f87;
       --danger: #8a3d2b;
+      --hero-name: #146c4f;
     }
     :root[data-theme="dark"] {
       color-scheme: dark;
-      --bg: #111713;
-      --paper: #18201b;
-      --ink: #edf4ed;
-      --muted: #aab8af;
-      --line: rgba(237, 244, 237, .16);
+      --bg: #000000;
+      --paper: #050505;
+      --ink: #f5f5f5;
+      --muted: #b8b8b8;
+      --line: rgba(245, 245, 245, .18);
       --shadow: 0 24px 80px rgba(0, 0, 0, .42);
-      --gold: #f0b34a;
+      --gold: #f5f5f5;
       --green: #69c59d;
       --blue: #76b9dc;
       --danger: #e0a193;
+      --hero-name: #69c59d;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
       color: var(--ink);
-      background:
-        radial-gradient(circle at 10% 8%, rgba(216,154,43,.28), transparent 28rem),
-        radial-gradient(circle at 92% 0%, rgba(40,91,123,.16), transparent 34rem),
-        linear-gradient(135deg, #fbf5ea, #efe3cf 58%, #dfe7dc);
+      background: var(--bg);
       font-family: Georgia, 'Times New Roman', serif;
     }
     :root[data-theme="dark"] body {
-      background:
-        radial-gradient(circle at 10% 8%, rgba(240,179,74,.16), transparent 28rem),
-        radial-gradient(circle at 92% 0%, rgba(118,185,220,.14), transparent 34rem),
-        linear-gradient(135deg, #0f1512, #151d18 58%, #0b1110);
+      background: var(--bg);
     }
     body::before {
       content: '';
       position: fixed;
       inset: 0;
       z-index: -1;
-      opacity: .24;
-      background-image:
-        linear-gradient(rgba(23,33,29,.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(23,33,29,.04) 1px, transparent 1px);
-      background-size: 32px 32px;
-      mask-image: linear-gradient(to bottom, black, transparent 88%);
+      opacity: 0;
     }
     :root[data-theme="dark"] body::before {
-      opacity: .16;
-      background-image:
-        linear-gradient(rgba(237,244,237,.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(237,244,237,.05) 1px, transparent 1px);
+      background-image: none;
+      opacity: 0;
     }
     a { color: inherit; }
     .hero {
@@ -88,8 +77,11 @@
       line-height: .88;
       letter-spacing: -.075em;
     }
-    .scope-panel { display: grid; gap: 14px; padding: 18px; border: 1px solid var(--line); background: rgba(255,250,240,.65); box-shadow: var(--shadow); transform: rotate(.75deg); }
-    .scope-panel article { padding: 22px; background: rgba(255,253,248,.92); border-left: 7px solid var(--accent); }
+    h1 .hero-name {
+      color: var(--hero-name);
+    }
+    .scope-panel { display: grid; gap: 14px; padding: 18px; border: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow); transform: rotate(.75deg); }
+    .scope-panel article { padding: 22px; background: var(--paper); border-left: 7px solid var(--accent); }
     .scope-panel strong { display: block; color: var(--accent); font-size: 2.4rem; line-height: 1; }
     .scope-panel h2 { margin: 8px 0 6px; font-size: 1.35rem; line-height: 1; }
     .scope-panel p { margin: 0; color: var(--muted); font: 800 .82rem 'Trebuchet MS', Verdana, sans-serif; }
@@ -102,23 +94,23 @@
       gap: 14px;
       align-items: center;
       padding: 13px clamp(20px, 5vw, 76px);
-      background: rgba(242,234,219,.94);
+      background: var(--paper);
       border-block: 1px solid var(--line);
       backdrop-filter: blur(18px);
     }
-    .toolbar input { width: 100%; border: 1px solid var(--line); border-radius: 999px; padding: 12px 16px; background: #fffaf0; color: var(--ink); font: 800 .95rem 'Trebuchet MS', Verdana, sans-serif; outline-color: var(--gold); }
-    .toolbar button { border: 1px solid var(--line); border-radius: 999px; padding: 10px 13px; background: #fffaf0; color: #1f4936; cursor: pointer; font: 900 .74rem 'Trebuchet MS', Verdana, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+    .toolbar input { width: 100%; border: 1px solid var(--line); border-radius: 999px; padding: 12px 16px; background: var(--paper); color: var(--ink); font: 800 .95rem 'Trebuchet MS', Verdana, sans-serif; outline-color: var(--gold); }
+    .toolbar button { border: 1px solid var(--line); border-radius: 999px; padding: 10px 13px; background: var(--paper); color: var(--green); cursor: pointer; font: 900 .74rem 'Trebuchet MS', Verdana, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
     .nav-scroll { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; }
-    .nav-scroll a { flex: 0 0 auto; border: 1px solid var(--line); border-radius: 999px; padding: 9px 12px; background: #fffaf0; text-decoration: none; font: 900 .78rem 'Trebuchet MS', Verdana, sans-serif; }
+    .nav-scroll a { flex: 0 0 auto; border: 1px solid var(--line); border-radius: 999px; padding: 9px 12px; background: var(--paper); text-decoration: none; font: 900 .78rem 'Trebuchet MS', Verdana, sans-serif; }
     .layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 24px; padding: 30px clamp(20px, 5vw, 76px) 80px; }
-    .rail { position: sticky; top: 82px; align-self: start; display: grid; gap: 8px; max-height: calc(100vh - 100px); overflow: auto; padding: 12px; border: 1px solid var(--line); background: rgba(255,250,240,.72); box-shadow: 0 18px 44px rgba(28,34,30,.09); }
-    .rail a { display: grid; grid-template-columns: 48px 1fr; gap: 10px; align-items: center; padding: 10px; text-decoration: none; border: 1px solid transparent; background: rgba(255,255,255,.46); }
-    .rail a:hover { border-color: var(--line); background: #fffaf0; }
+    .rail { position: sticky; top: 82px; align-self: start; display: grid; gap: 8px; max-height: calc(100vh - 100px); overflow: auto; padding: 12px; border: 1px solid var(--line); background: var(--paper); box-shadow: 0 18px 44px rgba(28,34,30,.09); }
+    .rail a { display: grid; grid-template-columns: 48px 1fr; gap: 10px; align-items: center; padding: 10px; text-decoration: none; border: 1px solid transparent; background: var(--paper); }
+    .rail a:hover { border-color: var(--line); background: rgba(127, 127, 127, .08); }
     .rail span { color: var(--green); font: 900 1rem 'Trebuchet MS', Verdana, sans-serif; }
     .rail small { color: var(--muted); font: 800 .72rem 'Trebuchet MS', Verdana, sans-serif; }
     .content { min-width: 0; }
-    .notice { margin: 0 0 24px; padding: 16px 18px; border: 1px solid rgba(138,61,43,.25); background: rgba(255,250,240,.8); color: #58372e; font: 800 .9rem 'Trebuchet MS', Verdana, sans-serif; }
-    .syllabus-section { scroll-margin-top: 92px; margin: 0 0 30px; padding: clamp(16px, 3vw, 30px); border: 1px solid var(--line); background: rgba(255,250,240,.68); box-shadow: var(--shadow); }
+    .notice { margin: 0 0 24px; padding: 16px 18px; border: 1px solid rgba(138,61,43,.25); background: var(--paper); color: var(--danger); font: 800 .9rem 'Trebuchet MS', Verdana, sans-serif; }
+    .syllabus-section { scroll-margin-top: 92px; margin: 0 0 30px; padding: clamp(16px, 3vw, 30px); border: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow); }
     .syllabus-section[hidden] { display: none; }
     .section-header { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: end; padding-bottom: 17px; border-bottom: 3px solid var(--accent); }
     .section-header p { margin: 0 0 8px; color: var(--accent); font: 900 .75rem 'Trebuchet MS', Verdana, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
@@ -128,10 +120,10 @@
     .section-counts strong { display: block; color: var(--ink); font-size: 2.4rem; line-height: 1; }
     .lanes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 18px; margin-top: 18px; }
     .lane { min-width: 0; }
-    .lane-title { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 0 0 12px; padding: 12px 14px; background: rgba(23,33,29,.06); border: 1px solid var(--line); }
+    .lane-title { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 0 0 12px; padding: 12px 14px; background: var(--paper); border: 1px solid var(--line); }
     .lane-title h3 { margin: 0; font-size: 1.15rem; }
     .lane-title span { color: var(--muted); font: 900 .75rem 'Trebuchet MS', Verdana, sans-serif; text-transform: uppercase; }
-    .source-card { margin: 0 0 12px; border: 1px solid var(--line); background: rgba(255,253,248,.9); }
+    .source-card { margin: 0 0 12px; border: 1px solid var(--line); background: var(--paper); }
     .source-card[hidden] { display: none; }
     .source-card summary { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 14px; cursor: pointer; list-style: none; }
     .source-card summary::-webkit-details-marker { display: none; }
@@ -152,13 +144,6 @@
     .lightbox.open { display: grid; }
     .lightbox button { position: fixed; top: 18px; right: 18px; border: 0; border-radius: 999px; padding: 10px 14px; color: var(--ink); background: #fffaf0; cursor: pointer; font: 900 .8rem 'Trebuchet MS', Verdana, sans-serif; }
     .lightbox img { max-width: min(100%, 1100px); max-height: 92vh; background: #fff; box-shadow: 0 24px 80px rgba(0,0,0,.55); }
-    :root[data-theme="dark"] .scope-panel,
-    :root[data-theme="dark"] .toolbar,
-    :root[data-theme="dark"] .rail,
-    :root[data-theme="dark"] .notice,
-    :root[data-theme="dark"] .syllabus-section {
-      background: rgba(18, 25, 21, .82);
-    }
     :root[data-theme="dark"] .scope-panel article,
     :root[data-theme="dark"] .toolbar input,
     :root[data-theme="dark"] .toolbar button,
@@ -168,17 +153,14 @@
     :root[data-theme="dark"] .source-card,
     :root[data-theme="dark"] .empty,
     :root[data-theme="dark"] .lightbox button {
-      background: rgba(23, 31, 26, .96);
+      background: var(--paper);
       color: var(--ink);
       border-color: var(--line);
-    }
-    :root[data-theme="dark"] .rail a {
-      background: rgba(255, 255, 255, .045);
     }
     :root[data-theme="dark"] .rail a:hover,
     :root[data-theme="dark"] .toolbar button:hover,
     :root[data-theme="dark"] .nav-scroll a:hover {
-      background: rgba(255, 255, 255, .09);
+      background: rgba(255, 255, 255, .08);
     }
     :root[data-theme="dark"] .notice {
       color: #f0c7bc;
@@ -208,7 +190,7 @@
   <header class="hero">
     <div>
       <p class="kicker">IB Physics HL / cleaned syllabus bank</p>
-      <h1>Mr Khaled IB Physics Question Bank</h1>
+      <h1><span class="hero-name">Mr Khaled</span> IB Physics Question Bank</h1>
     </div>
     <aside class="scope-panel" aria-label="Topic summary"><article style="--accent:#1f6f55"><strong>A</strong><h2>Space, time and motion</h2><p>5 syllabus sections / 168 rendered pages</p></article><article style="--accent:#9b641f"><strong>B</strong><h2>The particulate nature of matter</h2><p>5 syllabus sections / 65 rendered pages</p></article><article style="--accent:#285b7b"><strong>D</strong><h2>Fields</h2><p>3 syllabus sections / 97 rendered pages</p></article></aside>
   </header>
